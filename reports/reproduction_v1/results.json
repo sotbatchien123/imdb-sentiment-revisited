@@ -1,0 +1,410 @@
+{
+  "runs": [
+    {
+      "variant": "code",
+      "seed": 42,
+      "epochs": 4,
+      "passes": 8,
+      "max_length": 256,
+      "test": {
+        "accuracy": 0.88848,
+        "macro_f1": 0.888104621620111,
+        "confusion_matrix": [
+          [
+            10382,
+            2118
+          ],
+          [
+            670,
+            11830
+          ]
+        ],
+        "length_groups": {
+          "short": {
+            "accuracy": 0.9147188459997329,
+            "macro_f1": 0.914498009996398,
+            "examples": 14974
+          },
+          "long": {
+            "accuracy": 0.8492918412128466,
+            "macro_f1": 0.8485808917050772,
+            "examples": 10026
+          }
+        }
+      },
+      "final_validation": {
+        "epoch": 4,
+        "train_loss": 0.22120684209755986,
+        "validation_accuracy": 0.8861333333333333,
+        "validation_macro_f1": 0.8857364803867427,
+        "validation_loss": 0.28683124821980793,
+        "seconds": 332.34577894210815,
+        "lr": 9.499924000607995e-05
+      },
+      "truncation": {
+        "train": {
+          "reviews": 21027,
+          "truncated_reviews": 8642,
+          "truncation_fraction": 0.4109953868835307
+        },
+        "validation": {
+          "reviews": 3750,
+          "truncated_reviews": 1568,
+          "truncation_fraction": 0.41813333333333336
+        },
+        "test": {
+          "reviews": 25000,
+          "truncated_reviews": 10026,
+          "truncation_fraction": 0.40104
+        }
+      },
+      "selection": "final model, no checkpoint selection",
+      "training_seconds": 1746.2235231399536,
+      "signature": "658b1723c6a2cc751de6abfe5d4e1ecbb32ca57d510d839af22e4b077c324238"
+    },
+    {
+      "variant": "code",
+      "seed": 43,
+      "epochs": 4,
+      "passes": 8,
+      "max_length": 256,
+      "test": {
+        "accuracy": 0.90132,
+        "macro_f1": 0.9013174533587284,
+        "confusion_matrix": [
+          [
+            11330,
+            1170
+          ],
+          [
+            1297,
+            11203
+          ]
+        ],
+        "length_groups": {
+          "short": {
+            "accuracy": 0.9227995191665553,
+            "macro_f1": 0.9227956503526346,
+            "examples": 14974
+          },
+          "long": {
+            "accuracy": 0.8692399760622381,
+            "macro_f1": 0.869169317296142,
+            "examples": 10026
+          }
+        }
+      },
+      "final_validation": {
+        "epoch": 4,
+        "train_loss": 0.22422672146690786,
+        "validation_accuracy": 0.9002666666666667,
+        "validation_macro_f1": 0.9002602833247995,
+        "validation_loss": 0.26888320452372233,
+        "seconds": 331.784791469574,
+        "lr": 9.499924000607995e-05
+      },
+      "truncation": {
+        "train": {
+          "reviews": 21027,
+          "truncated_reviews": 8642,
+          "truncation_fraction": 0.4109953868835307
+        },
+        "validation": {
+          "reviews": 3750,
+          "truncated_reviews": 1568,
+          "truncation_fraction": 0.41813333333333336
+        },
+        "test": {
+          "reviews": 25000,
+          "truncated_reviews": 10026,
+          "truncation_fraction": 0.40104
+        }
+      },
+      "selection": "final model, no checkpoint selection",
+      "training_seconds": 1317.6958990097046,
+      "signature": "658b1723c6a2cc751de6abfe5d4e1ecbb32ca57d510d839af22e4b077c324238"
+    },
+    {
+      "variant": "code",
+      "seed": 44,
+      "epochs": 4,
+      "passes": 8,
+      "max_length": 256,
+      "test": {
+        "accuracy": 0.89304,
+        "macro_f1": 0.892928154634796,
+        "confusion_matrix": [
+          [
+            11567,
+            933
+          ],
+          [
+            1741,
+            10759
+          ]
+        ],
+        "length_groups": {
+          "short": {
+            "accuracy": 0.9195271804461066,
+            "macro_f1": 0.9195264536668718,
+            "examples": 14974
+          },
+          "long": {
+            "accuracy": 0.8534809495312188,
+            "macro_f1": 0.8526274361893359,
+            "examples": 10026
+          }
+        }
+      },
+      "final_validation": {
+        "epoch": 4,
+        "train_loss": 0.2415075048771795,
+        "validation_accuracy": 0.8930666666666667,
+        "validation_macro_f1": 0.8929552183005254,
+        "validation_loss": 0.2877618648529053,
+        "seconds": 287.2438807487488,
+        "lr": 9.499924000607995e-05
+      },
+      "truncation": {
+        "train": {
+          "reviews": 21027,
+          "truncated_reviews": 8642,
+          "truncation_fraction": 0.4109953868835307
+        },
+        "validation": {
+          "reviews": 3750,
+          "truncated_reviews": 1568,
+          "truncation_fraction": 0.41813333333333336
+        },
+        "test": {
+          "reviews": 25000,
+          "truncated_reviews": 10026,
+          "truncation_fraction": 0.40104
+        }
+      },
+      "selection": "final model, no checkpoint selection",
+      "training_seconds": 1282.8354597091675,
+      "signature": "658b1723c6a2cc751de6abfe5d4e1ecbb32ca57d510d839af22e4b077c324238"
+    },
+    {
+      "variant": "paper",
+      "seed": 42,
+      "epochs": 10,
+      "passes": 10,
+      "max_length": 128,
+      "test": {
+        "accuracy": 0.85136,
+        "macro_f1": 0.8512726111177864,
+        "confusion_matrix": [
+          [
+            10339,
+            2161
+          ],
+          [
+            1555,
+            10945
+          ]
+        ],
+        "length_groups": {
+          "short": {
+            "accuracy": 0.9100445009535919,
+            "macro_f1": 0.9093210624386672,
+            "examples": 3146
+          },
+          "long": {
+            "accuracy": 0.842912052713462,
+            "macro_f1": 0.8428773035968913,
+            "examples": 21854
+          }
+        }
+      },
+      "final_validation": {
+        "epoch": 10,
+        "train_loss": 0.28643026544282457,
+        "validation_accuracy": 0.8485333333333334,
+        "validation_macro_f1": 0.8484421129987143,
+        "validation_loss": 0.4210226977030436,
+        "seconds": 120.55958199501038,
+        "lr": 3e-05
+      },
+      "truncation": {
+        "train": {
+          "reviews": 21027,
+          "truncated_reviews": 18530,
+          "truncation_fraction": 0.8812479193417987
+        },
+        "validation": {
+          "reviews": 3750,
+          "truncated_reviews": 3266,
+          "truncation_fraction": 0.8709333333333333
+        },
+        "test": {
+          "reviews": 25000,
+          "truncated_reviews": 21854,
+          "truncation_fraction": 0.87416
+        }
+      },
+      "selection": "final model, no checkpoint selection",
+      "training_seconds": 1201.7393300533295,
+      "signature": "cc80af7158890efb8d3076f3ae0da34753ce45cf68935c29f38d6005aeeb8580"
+    },
+    {
+      "variant": "paper",
+      "seed": 43,
+      "epochs": 10,
+      "passes": 10,
+      "max_length": 128,
+      "test": {
+        "accuracy": 0.84684,
+        "macro_f1": 0.8461576229058563,
+        "confusion_matrix": [
+          [
+            9753,
+            2747
+          ],
+          [
+            1082,
+            11418
+          ]
+        ],
+        "length_groups": {
+          "short": {
+            "accuracy": 0.8989192625556262,
+            "macro_f1": 0.8970131350901964,
+            "examples": 3146
+          },
+          "long": {
+            "accuracy": 0.8393429120527135,
+            "macro_f1": 0.8388265300734983,
+            "examples": 21854
+          }
+        }
+      },
+      "final_validation": {
+        "epoch": 10,
+        "train_loss": 0.2848204307613526,
+        "validation_accuracy": 0.8437333333333333,
+        "validation_macro_f1": 0.8430906325643168,
+        "validation_loss": 0.3971124008178711,
+        "seconds": 124.09686064720154,
+        "lr": 3e-05
+      },
+      "truncation": {
+        "train": {
+          "reviews": 21027,
+          "truncated_reviews": 18530,
+          "truncation_fraction": 0.8812479193417987
+        },
+        "validation": {
+          "reviews": 3750,
+          "truncated_reviews": 3266,
+          "truncation_fraction": 0.8709333333333333
+        },
+        "test": {
+          "reviews": 25000,
+          "truncated_reviews": 21854,
+          "truncation_fraction": 0.87416
+        }
+      },
+      "selection": "final model, no checkpoint selection",
+      "training_seconds": 1203.0990805625916,
+      "signature": "cc80af7158890efb8d3076f3ae0da34753ce45cf68935c29f38d6005aeeb8580"
+    },
+    {
+      "variant": "paper",
+      "seed": 44,
+      "epochs": 10,
+      "passes": 10,
+      "max_length": 128,
+      "test": {
+        "accuracy": 0.85184,
+        "macro_f1": 0.8515334472119893,
+        "confusion_matrix": [
+          [
+            10080,
+            2420
+          ],
+          [
+            1284,
+            11216
+          ]
+        ],
+        "length_groups": {
+          "short": {
+            "accuracy": 0.9075015893197711,
+            "macro_f1": 0.9061827775999783,
+            "examples": 3146
+          },
+          "long": {
+            "accuracy": 0.8438272169854489,
+            "macro_f1": 0.8436366172665792,
+            "examples": 21854
+          }
+        }
+      },
+      "final_validation": {
+        "epoch": 10,
+        "train_loss": 0.28825082421676973,
+        "validation_accuracy": 0.8456,
+        "validation_macro_f1": 0.8452857747208393,
+        "validation_loss": 0.4554979644139608,
+        "seconds": 118.885507106781,
+        "lr": 3e-05
+      },
+      "truncation": {
+        "train": {
+          "reviews": 21027,
+          "truncated_reviews": 18530,
+          "truncation_fraction": 0.8812479193417987
+        },
+        "validation": {
+          "reviews": 3750,
+          "truncated_reviews": 3266,
+          "truncation_fraction": 0.8709333333333333
+        },
+        "test": {
+          "reviews": 25000,
+          "truncated_reviews": 21854,
+          "truncation_fraction": 0.87416
+        }
+      },
+      "selection": "final model, no checkpoint selection",
+      "training_seconds": 1213.5953052043915,
+      "signature": "cc80af7158890efb8d3076f3ae0da34753ce45cf68935c29f38d6005aeeb8580"
+    }
+  ],
+  "aggregate": {
+    "code": {
+      "accuracy": {
+        "mean": 0.8942800000000001,
+        "sample_std": 0.00650919349842973
+      },
+      "macro_f1": {
+        "mean": 0.894116743204545,
+        "sample_std": 0.006686126511617742
+      },
+      "seeds": [
+        42,
+        43,
+        44
+      ]
+    },
+    "paper": {
+      "accuracy": {
+        "mean": 0.8500133333333334,
+        "sample_std": 0.0027586470113686707
+      },
+      "macro_f1": {
+        "mean": 0.8496545604118774,
+        "sample_std": 0.0030312436074608593
+      },
+      "seeds": [
+        42,
+        43,
+        44
+      ]
+    }
+  },
+  "paper_reported_accuracy": 0.9767,
+  "note": "Paper accuracy uses its own re-split and evaluation; not directly comparable to the clean split."
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "file": "README.md",
+    "verified": true
+  },
+  {
+    "file": "config.json",
+    "verified": true
+  },
+  {
+    "file": "model.safetensors",
+    "verified": true
+  },
+  {
+    "file": "tokenizer.json",
+    "verified": true
+  },
+  {
+    "file": "tokenizer_config.json",
+    "verified": true
+  },
+  {
+    "file": "vocab.txt",
+    "verified": true
+  }
+]

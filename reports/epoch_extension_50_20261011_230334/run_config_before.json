@@ -1,0 +1,36 @@
+{
+  "config": {
+    "dataset": "data/processed/imdb_full_v1",
+    "encoder": "checkpoints/bert-base-uncased",
+    "output": "work_dirs/imdb_full_v1",
+    "report": "reports/full_imdb_results.json",
+    "generate_full_report": true,
+    "max_length": 256,
+    "batch_size": 8,
+    "gradient_accumulation": 4,
+    "learning_rate": 0.0001,
+    "weight_decay": 0.01,
+    "dropout": 0.5,
+    "lstm_hidden_size": 768,
+    "max_epochs": 15,
+    "min_epochs": 5,
+    "patience": 3,
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "models": [
+      "mean",
+      "bilstm",
+      "bilstm_headtail"
+    ],
+    "encoder_frozen": true,
+    "encoder_eval_mode": true,
+    "encoder_precision": "bfloat16",
+    "head_precision": "float32"
+  },
+  "signature": "5b6c0ef0bb83fbc8a86708fef7e40f9667308a56b40b8048a0dd84714ccbea25",
+  "torch": "2.7.1+cu128",
+  "gpu": "NVIDIA GeForce RTX 5070 Laptop GPU"
+}

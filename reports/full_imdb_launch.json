@@ -1,0 +1,66 @@
+{
+  "code_sha256": {
+    "scripts/train_baselines.py": "da54fefec71828783cfdb4a08c0c176e4753f82eb29ee5b99722cf30af8fe99c",
+    "scripts/runtime_io.py": "0bdbc614c1e3abfc296e8bbf2b9425a0073e72d0a39b2fde1e402eb1812d1c3a",
+    "scripts/prepare_full_imdb.py": "43ad4a427fb1de86fb754021f075b1340787d8c9b8279830805441f82c3e4928",
+    "scripts/report_full_imdb.py": "0b906d82aa2860f24cf095f4fef9dbe99f3e36ea6a9db294764a5d7a625524d8",
+    "configs/full_imdb.json": "a0cc5546db149d563e3f1fbf55da85cde8612d300042ee93ec92cb52b4d80403"
+  },
+  "tests_passed": [
+    "headtail_selection",
+    "status_lock_nonfatal",
+    "atomic_retry",
+    "official_test_and_split_isolation"
+  ],
+  "smoke_report": [
+    {
+      "model": "mean",
+      "loss": 0.7702266573905945,
+      "head_updates": true,
+      "encoder_gradients_absent": true,
+      "padding_check": true,
+      "checkpoint_reload_check": true,
+      "seconds": 0.9088401794433594,
+      "peak_gpu_mb": 488.14013671875,
+      "validation_examples": 16
+    },
+    {
+      "model": "bilstm",
+      "loss": 0.7490600347518921,
+      "head_updates": true,
+      "encoder_gradients_absent": true,
+      "padding_check": true,
+      "checkpoint_reload_check": true,
+      "seconds": 1.1392579078674316,
+      "peak_gpu_mb": 745.794921875,
+      "validation_examples": 16
+    },
+    {
+      "model": "bilstm_headtail",
+      "loss": 0.7435667514801025,
+      "head_updates": true,
+      "encoder_gradients_absent": true,
+      "padding_check": true,
+      "checkpoint_reload_check": true,
+      "seconds": 1.034050464630127,
+      "peak_gpu_mb": 853.97216796875,
+      "validation_examples": 16
+    }
+  ],
+  "status_at_check": {
+    "pid": 30620,
+    "updated_at": "2026-10-11T22:51:39+0700",
+    "stage": "training",
+    "model": "mean",
+    "seed": 42,
+    "epoch": 2,
+    "max_epochs": 15,
+    "batch": 562,
+    "total_batches": 2629,
+    "train_loss": 0.5355294232796944,
+    "elapsed_epoch_seconds": 25.12830138206482,
+    "best_validation_macro_f1": 0.7986659651294075,
+    "gpu_allocated_mb": 435.03759765625
+  },
+  "first_checkpoint_saved": true
+}

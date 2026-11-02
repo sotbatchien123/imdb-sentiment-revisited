@@ -1,0 +1,60 @@
+{
+  "created_at": "2026-10-16T22:11:02.113765+07:00",
+  "validation_analysis": {
+    "stage": "complete",
+    "validation_reviews": 3750,
+    "annotated_cases": 100,
+    "annotation_by": "assistant; no independent human verification",
+    "labels_changed": false,
+    "summary": "reports/validation_analysis/summary.json",
+    "cases": "reports/validation_analysis/cases_100_reviewed.json"
+  },
+  "multichunk": {
+    "stage": "running",
+    "live_status": "work_dirs/multichunk_v1/status_live.json",
+    "snapshot": {
+      "pid": 18984,
+      "updated_at": "2026-10-16T22:10:53+0700",
+      "stage": "validation",
+      "seed": 42,
+      "epoch": 1,
+      "max_epochs": 50
+    },
+    "smoke": {
+      "passed": true,
+      "checks": [
+        "all content tokens retained",
+        "single chunk equivalence",
+        "review pooling isolation",
+        "longest review backward",
+        "frozen encoder",
+        "checkpoint prediction equality",
+        "optimizer and RNG continuation"
+      ],
+      "longest_review_chunks": 10,
+      "peak_allocated_mib": 787.08740234375,
+      "seconds": 0.7480299472808838,
+      "signature": "bede9bf43cb7d38788d9601c0bb49f1e735cc25570ebc7f2f572d677c4d985a3"
+    },
+    "pilot_seed": 42,
+    "max_epochs_per_seed": 50,
+    "conditional_extra_seeds": [
+      43,
+      44
+    ],
+    "test_evaluated": false
+  },
+  "demo": {
+    "stage": "running_and_verified",
+    "url": "http://127.0.0.1:8765",
+    "device": "cpu",
+    "api_checks": "reports/demo_checks.json",
+    "browser_checks": [
+      "long review prediction",
+      "two result cards",
+      "head-tail visible segments"
+    ],
+    "screenshot": "reports/demo-preview.png"
+  },
+  "instructions": "PHASE2_README.md"
+}

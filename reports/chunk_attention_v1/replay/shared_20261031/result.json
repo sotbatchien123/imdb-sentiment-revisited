@@ -1,0 +1,32 @@
+{
+  "tag": "shared_20261031",
+  "outcome": "completed_max_batches",
+  "device": "cuda",
+  "cuda_launch_blocking": "1",
+  "allow_shared_gpu": true,
+  "batches_completed": 4000,
+  "epoch6_total_batches": 10514,
+  "mean_train_loss": 0.219827539175938,
+  "reviews_completed": 8000,
+  "seconds": 1522.0,
+  "last_batch": null,
+  "error": null,
+  "gpu_before": {
+    "gpu": "NVIDIA GeForce RTX 5070 Laptop GPU, 610.62, 78, 94.23 W, 2490 MHz, 3458 MiB, 8151 MiB, 77 %",
+    "compute_apps": [
+      "57780, ...ram Files\\Python39\\python.exe"
+    ],
+    "graphics_apps_count": 36
+  },
+  "gpu_after": {
+    "gpu": "NVIDIA GeForce RTX 5070 Laptop GPU, 610.62, 73, 66.28 W, 2760 MHz, 7365 MiB, 8151 MiB, 85 %",
+    "compute_apps": [
+      "50132, ...ram Files\\Python39\\python.exe",
+      "57780, ...ram Files\\Python39\\python.exe"
+    ],
+    "graphics_apps_count": 37
+  },
+  "peak_allocated_mib": 864.29736328125,
+  "started_at": "2026-10-31T06:42:52+0700",
+  "note": "Không lưu checkpoint; work_dirs/multichunk_v1 chỉ được đọc."
+}

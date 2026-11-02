@@ -1,0 +1,99 @@
+{
+  "purpose": "Static CPU checks for multichunk_v1 seed42 CUDA failure; read-only",
+  "checks": {
+    "checkpoint": {
+      "signature_current": "bede9bf43cb7d38788d9601c0bb49f1e735cc25570ebc7f2f572d677c4d985a3",
+      "signature_latest": "bede9bf43cb7d38788d9601c0bb49f1e735cc25570ebc7f2f572d677c4d985a3",
+      "signature_best": "bede9bf43cb7d38788d9601c0bb49f1e735cc25570ebc7f2f572d677c4d985a3",
+      "signature_matches": true,
+      "latest_epoch": 5,
+      "best_epoch": 5,
+      "best_validation_f1": 0.9063541243422288,
+      "history_matches_latest": true,
+      "history_epochs": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "head_float_tensors": 10,
+      "head_nonfinite_tensors": 0,
+      "optimizer_float_tensors": 30,
+      "optimizer_nonfinite_tensors": 0,
+      "optimizer_step": 3290
+    },
+    "tokens": {
+      "train": {
+        "reviews": 21027,
+        "chunks": 33962,
+        "max_chunks": 10,
+        "min_token_id": 101,
+        "max_token_id": 29668,
+        "vocab_size": 30522,
+        "token_ids_in_range": true,
+        "min_chunk_len": 3,
+        "max_chunk_len": 256,
+        "chunk_len_within_256": true,
+        "labels": [
+          0,
+          1
+        ],
+        "coverage_ok": true
+      },
+      "validation": {
+        "reviews": 3750,
+        "chunks": 6173,
+        "max_chunks": 12,
+        "min_token_id": 101,
+        "max_token_id": 29658,
+        "vocab_size": 30522,
+        "token_ids_in_range": true,
+        "min_chunk_len": 3,
+        "max_chunk_len": 256,
+        "chunk_len_within_256": true,
+        "labels": [
+          0,
+          1
+        ],
+        "coverage_ok": true
+      }
+    },
+    "epoch6_order": {
+      "batches": 10514,
+      "microbatch_chunks": 4,
+      "max_chunks_in_batch": 13,
+      "first_review_ids": [
+        "train/neg/11022_4",
+        "train/pos/3199_10"
+      ],
+      "note": "Chỉ ước lượng vị trí lỗi theo thời gian (epoch5 dài hơn do tranh GPU); không xác định được batch chính xác vì status cuối bị ghi đè bởi trạng thái failed.",
+      "estimated_failure_fraction_of_epoch": 0.274,
+      "estimated_batch_window": [
+        1882,
+        3882
+      ]
+    }
+  },
+  "checksums_sha256": {
+    "configs/multichunk_pilot.json": "3c84994e043e961a659912567023163761b03593ac06737dbe07ce8dd1a634df",
+    "scripts/train_multichunk.py": "80687a91a13e1a3d6517c9d821d18055f717fec5ade3e2450f16efe0526c36f7",
+    "scripts/phase2_core.py": "83b65f97147ddab50f5a56bfdb1da3986c37a715f90011107e0fb68a8a5b323b",
+    "scripts/train_baselines.py": "df9a3b8f8e57ac3bbb21e763aa56d0e061bd0bf3417dc042230b157766f3a3bf",
+    "data/processed/imdb_full_v1/train.jsonl": "affd442950ac199aee8d4d7915df2c5e88984e7d0ff7b9f235b021835ce1b3cd",
+    "data/processed/imdb_full_v1/validation.jsonl": "3ac14fc92ff71c3a3af875439253ab3fbaf4d825641338c1de4151b283024aed",
+    "work_dirs/multichunk_v1/seed42/latest.pt": "70738d56a52a91f9e50c57e94f14b42e32cf33bb1719515492addc95fd49f8b9",
+    "work_dirs/multichunk_v1/seed42/best.pt": "19072b3585c297d055d86a2b74a23b3aec1c5bfa0e46085d8d19277b5c810c70",
+    "work_dirs/multichunk_v1/seed42/history.json": "84b8994164ba140f9ba32ebb052c07b0dfc0e4a023fa16c2168f5b1da0c12a33",
+    "work_dirs/multichunk_v1/status_live.json": "c8af6416920acb956ed347ce3692c37d3343779242c83daf746e7a5239e900df"
+  },
+  "environment": {
+    "python": "3.9.13",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "torch": "2.7.1+cu128",
+    "torch_cuda_build": "12.8",
+    "cudnn": 90701,
+    "transformers": "4.51.3"
+  },
+  "all_static_checks_passed": true
+}

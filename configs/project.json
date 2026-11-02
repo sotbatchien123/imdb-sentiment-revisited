@@ -1,0 +1,16 @@
+{
+  "task": "binary_review_sentiment",
+  "source": "IMDb",
+  "genre": null,
+  "genre_filter_status": "prepared_movie_horror",
+  "dataset_downloaded": true,
+  "translation_model": "facebook/nllb-200-distilled-600M",
+  "translation_revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d",
+  "source_lang": "eng_Latn",
+  "target_lang": "vie_Latn",
+  "sentiment_training_status": "launched_check_live_status",
+  "baseline_config": "configs/full_imdb.json",
+  "status_file": "work_dirs/imdb_full_v1/status_live.json",
+  "scope": "all_labeled_IMDb",
+  "report_file": "reports/full_imdb_report.md"
+}

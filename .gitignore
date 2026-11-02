@@ -1,0 +1,42 @@
+# Môi trường và cache
+.venv*/
+.cache/
+tmp/
+__pycache__/
+*.pyc
+node_modules/
+
+# Dữ liệu, mô hình, checkpoint: lớn và chịu license của bên thứ ba (xem THIRD_PARTY_NOTICES.md)
+data/
+checkpoints/
+work_dirs/
+*.pt
+*.safetensors
+*.bin
+
+# Mã tác giả gốc không có license, không phân phối lại (hướng dẫn tải lại trong THIRD_PARTY_NOTICES.md)
+third_party/bert_bilstm_original/
+
+# Log chạy máy và đầu ra tạm
+logs/
+output/
+status_live.json
+*.lock
+
+# Toàn văn 3.750 review validation của IMDb
+reports/validation_analysis/predictions.jsonl
+
+# Có danh sách ứng dụng và đường dẫn cá nhân trên máy chạy
+reports/chunk_attention_v1/cuda_diagnosis.json
+reports/chunk_attention_v1/replay/20261030_201434/result.json
+
+# Hệ điều hành / trình soạn thảo
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/
+~$*
+
+# Ghi chú nội bộ của máy làm việc (không công bố)
+GHI_NHO.md

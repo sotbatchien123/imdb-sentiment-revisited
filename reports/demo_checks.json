@@ -1,0 +1,75 @@
+{
+  "passed": true,
+  "checks": [
+    "CPU health and real checkpoint metadata",
+    "empty and HTML-only rejected",
+    "oversized input rejected without truncation",
+    "invalid payload rejected",
+    "foreign origin rejected",
+    "arbitrary file path rejected",
+    "real inference: positive, negative, long, HTML normalization; token accounting and tail segments"
+  ],
+  "examples": [
+    {
+      "example": "positive",
+      "predictions": {
+        "bilstm": {
+          "label": 1,
+          "positive_probability": 1.0
+        },
+        "bilstm_headtail": {
+          "label": 1,
+          "positive_probability": 1.0
+        }
+      },
+      "tokens": 14,
+      "seconds": 0.11488771438598633
+    },
+    {
+      "example": "negative",
+      "predictions": {
+        "bilstm": {
+          "label": 0,
+          "positive_probability": 9.236061568329568e-12
+        },
+        "bilstm_headtail": {
+          "label": 0,
+          "positive_probability": 2.443018355701484e-15
+        }
+      },
+      "tokens": 21,
+      "seconds": 0.12447977066040039
+    },
+    {
+      "example": "long",
+      "predictions": {
+        "bilstm": {
+          "label": 1,
+          "positive_probability": 1.0
+        },
+        "bilstm_headtail": {
+          "label": 0,
+          "positive_probability": 1.3743868976234808e-06
+        }
+      },
+      "tokens": 1017,
+      "seconds": 0.972585916519165
+    },
+    {
+      "example": "html",
+      "predictions": {
+        "bilstm": {
+          "label": 1,
+          "positive_probability": 1.0
+        },
+        "bilstm_headtail": {
+          "label": 1,
+          "positive_probability": 1.0
+        }
+      },
+      "tokens": 10,
+      "seconds": 0.09079837799072266
+    }
+  ],
+  "note": "Functional integration, not benchmark accuracy; browser UI checked separately."
+}

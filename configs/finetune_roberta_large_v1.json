@@ -1,0 +1,40 @@
+{
+  "version": "finetune_roberta_large_v1",
+  "purpose": "Hướng D: thay BERT-base bằng RoBERTa-large (355M), giữ nguyên cắt đầu–cuối 512 và giao thức của hướng B để so sánh công bằng.",
+  "dataset": "data/processed/imdb_full_v1",
+  "encoder": "checkpoints/roberta-large",
+  "encoder_source": "huggingface.co/FacebookAI/roberta-large (tải 31/10/2026)",
+  "output": "work_dirs/finetune_roberta_large_v1",
+  "report_dir": "reports/finetune_roberta_large_v1",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "max_length": 512,
+  "head_tokens": 128,
+  "tail_tokens": 382,
+  "truncation_note": "Giữ 128 token đầu + 382 token cuối, giống hướng B.",
+  "classifier": "RobertaForSequenceClassification (<s> -> dense+tanh -> dropout 0.1 -> Linear 2), loss cross-entropy",
+  "learning_rate": 1e-05,
+  "weight_decay": 0.01,
+  "adam_epsilon": 1e-08,
+  "warmup_fraction": 0.1,
+  "schedule": "linear decay về 0 sau warmup",
+  "epochs": 3,
+  "micro_batch_size": 4,
+  "gradient_accumulation": 8,
+  "max_grad_norm": 1.0,
+  "precision": "BF16 autocast, trọng số và optimizer FP32",
+  "gradient_checkpointing": true,
+  "eval_batch_size": 16,
+  "selection": "Chọn epoch có Macro-F1 validation cao nhất; test chỉ đánh giá một lần trên checkpoint đó.",
+  "hyperparameter_note": "lr 1e-5 (thấp hơn BERT-base) theo thực hành chuẩn cho mô hình large; các tham số khác giữ như hướng B.",
+  "checkpoint_policy": "latest.pt (~4,3 GB, mô hình + optimizer) và best.pt (~1,4 GB/seed) đều được giữ lại, không tự xóa (theo yêu cầu người dùng 31/10). Cần ~17 GB trống cho 3 seed.",
+  "metrics": [
+    "accuracy",
+    "macro_f1"
+  ],
+  "optimizer_foreach": false,
+  "optimizer_note": "AdamW foreach=False: cập nhật từng tensor, cùng thuật toán, giảm đỉnh VRAM để tránh tràn sang RAM hệ thống trên GPU 8 GB (lượt 20:39 chậm 2,5 s/bước khi VRAM đầy)."
+}

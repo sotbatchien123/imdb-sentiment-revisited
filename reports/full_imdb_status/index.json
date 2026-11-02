@@ -1,0 +1,10 @@
+{
+  "updated_at": "2026-10-15T03:31:44.861391+07:00",
+  "files": [
+    "D:\\MovieReview\\reports\\full_imdb_status\\mean.json",
+    "D:\\MovieReview\\reports\\full_imdb_status\\bilstm.json",
+    "D:\\MovieReview\\reports\\full_imdb_status\\bilstm_headtail.json"
+  ],
+  "training_process_alive": false,
+  "source_stage": "complete"
+}

@@ -1,0 +1,36 @@
+{
+  "version": "finetune_headtail_v1",
+  "purpose": "Hướng B: fine-tune toàn bộ BERT-base với cắt đầu–cuối 512 token; so với tái lập bài báo (89,41%) và BiLSTM đầu–cuối đóng băng (91,87%) trên cùng split sạch.",
+  "dataset": "data/processed/imdb_full_v1",
+  "encoder": "checkpoints/bert-base-uncased",
+  "output": "work_dirs/finetune_headtail_v1",
+  "report_dir": "reports/finetune_headtail_v1",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "max_length": 512,
+  "head_tokens": 128,
+  "tail_tokens": 382,
+  "truncation_note": "Giữ 128 token đầu + 382 token cuối (Sun et al. 2019, How to Fine-Tune BERT for Text Classification: tốt nhất trên IMDb).",
+  "classifier": "BertForSequenceClassification (pooler [CLS] -> dropout 0.1 -> Linear 2), loss cross-entropy",
+  "learning_rate": 2e-05,
+  "weight_decay": 0.01,
+  "adam_epsilon": 1e-08,
+  "warmup_fraction": 0.1,
+  "schedule": "linear decay về 0 sau warmup",
+  "epochs": 3,
+  "micro_batch_size": 8,
+  "gradient_accumulation": 4,
+  "max_grad_norm": 1.0,
+  "precision": "BF16 autocast, trọng số và optimizer FP32",
+  "gradient_checkpointing": false,
+  "eval_batch_size": 32,
+  "selection": "Chọn epoch có Macro-F1 validation cao nhất (cùng giao thức baseline 11–15/10); test chỉ đánh giá một lần trên checkpoint đó.",
+  "checkpoint_policy": "latest.pt (mô hình + optimizer) và best.pt (trọng số) đều được giữ lại, không tự xóa (theo yêu cầu người dùng 31/10). Ghi chú: 3 seed đầu tiên đã chạy khi còn chính sách cũ nên latest.pt của chúng đã bị xóa.",
+  "metrics": [
+    "accuracy",
+    "macro_f1"
+  ]
+}

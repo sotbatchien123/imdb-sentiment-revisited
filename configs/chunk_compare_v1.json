@@ -1,0 +1,49 @@
+{
+  "version": "chunk_compare_v1",
+  "mode": "planned",
+  "mode_note": "Đổi thành \"frozen\" khi chốt giao thức trước lượt chính; runner từ chối chạy chính khi chưa frozen. Không sửa file này giữa chừng một lượt.",
+  "dataset": "data/processed/imdb_full_v1",
+  "encoder": "checkpoints/bert-base-uncased",
+  "output": "work_dirs/chunk_compare_v1",
+  "aggregations": ["mean", "attention"],
+  "run_order": ["mean", "attention"],
+  "batch_size": 2,
+  "gradient_accumulation": 16,
+  "chunk_microbatch": 4,
+  "learning_rate": 0.0001,
+  "weight_decay": 0.01,
+  "clip_grad_norm": 1.0,
+  "dropout": 0.5,
+  "lstm_hidden_size": 768,
+  "attention_dim": 128,
+  "attention_init_seed_offset": 1000,
+  "order_seed_offset": 2000,
+  "max_epochs": 50,
+  "early_stopping": false,
+  "selection": "validation macro_f1; tie keeps the earlier epoch",
+  "threshold": "argmax",
+  "content_tokens_per_chunk": 254,
+  "encoder_frozen": true,
+  "encoder_eval_mode": true,
+  "encoder_precision": "bfloat16",
+  "head_precision": "float32",
+  "activation_checkpointing_head": true,
+  "pilot_seed": 42,
+  "extension_seeds": [43, 44],
+  "gate": {
+    "min_delta_f1_attention_vs_mean": 0.003,
+    "long_f1_not_lower_than_mean": true,
+    "require_full_epochs": true,
+    "rule": "Practical pilot gate fixed before launch; not a significance test. Independent of multichunk_pilot.json gate."
+  },
+  "replace_A_reference": {
+    "overall_f1_min": 0.9223321811,
+    "long_f1_min": 0.9036980004,
+    "note": "Head-tail seed42 validation F1 + 0.005 and its long-review F1; informational for replacing model A."
+  },
+  "operations": {
+    "cuda_diagnosis": "reports/chunk_attention_v1/cuda_diagnosis.json",
+    "note": "Run B2 then C1 sequentially; avoid games/3D apps during long runs; on CUDA error resume from latest.pt in a new process."
+  },
+  "test_policy": "No test access during development, pilot or seed extension. Test only via evaluate_chunk_compare.py after method/checkpoint selection is locked on validation."
+}

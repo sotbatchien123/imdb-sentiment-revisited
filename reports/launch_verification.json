@@ -1,0 +1,49 @@
+{
+  "code_sha256": {
+    "scripts/train_baselines.py": "2e8a28d4d9db3053e9b98f2e191a6fd134b2e1b6d3932c0c2e40a536055c6088",
+    "scripts/prepare_horror.py": "92c17912d04cb7684ffbb6c449777fa5556be529b3e72dc541d9b8e4e8535a15",
+    "configs/baseline.json": "470d6d66837b0d0ea0b4dff77df95f49b8f0e9a535abf57163417e04421b738e"
+  },
+  "status_at_check": {
+    "pid": 21284,
+    "updated_at": "2026-10-11T22:30:44+0700",
+    "stage": "training",
+    "model": "cls",
+    "seed": 42,
+    "epoch": 7,
+    "max_epochs": 10,
+    "batch": 231,
+    "total_batches": 334,
+    "train_loss": 0.4915821304568997,
+    "elapsed_epoch_seconds": 4.032816410064697,
+    "best_validation_macro_f1": 0.5418468849422093,
+    "gpu_allocated_mb": 435.03759765625
+  },
+  "smoke_report": [
+    {
+      "model": "cls",
+      "loss": 0.6392096281051636,
+      "head_updates": true,
+      "encoder_gradients_absent": true,
+      "padding_check": false,
+      "seconds": 0.6365792751312256,
+      "peak_gpu_mb": 482.09130859375,
+      "validation_examples": 16
+    },
+    {
+      "model": "bilstm",
+      "loss": 0.7476789355278015,
+      "head_updates": true,
+      "encoder_gradients_absent": true,
+      "padding_check": true,
+      "seconds": 0.2486708164215088,
+      "peak_gpu_mb": 712.87548828125,
+      "validation_examples": 16
+    }
+  ],
+  "encoder_source": {
+    "repo": "google-bert/bert-base-uncased",
+    "revision": "86b5e0934494bd15c9632b12f734a8a67f723594"
+  },
+  "dataset_manifest": "data/processed/imdb_horror_movies_v1/manifest.json"
+}

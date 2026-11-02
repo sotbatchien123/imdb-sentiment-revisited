@@ -1,0 +1,53 @@
+{
+  "version": "reproduction_v1",
+  "purpose": "Tái lập phương pháp BERT+BiLSTM của bài báo gốc (arXiv 2502.20682) trên giao thức sạch của dự án để làm mốc so sánh công bằng.",
+  "dataset": "data/processed/imdb_full_v1",
+  "encoder": "checkpoints/bert-base-uncased",
+  "output": "work_dirs/reproduction_v1",
+  "report_dir": "reports/reproduction_v1",
+  "seeds": [42, 43, 44],
+  "run_order": ["code", "paper"],
+  "variants": {
+    "code": {
+      "source": "third_party/bert_bilstm_original/BERT+BiLSTM-SA.py (mã công bố)",
+      "max_length": 256,
+      "learning_rate": 0.0001,
+      "keras_decay": 0.00001,
+      "adam_epsilon": 1e-07,
+      "batch_size": 32,
+      "keras_epochs": 4,
+      "passes_per_epoch": 2,
+      "note": "model.fit(epochs=4) trên train.repeat(2) => 8 lượt qua train, validation sau mỗi 2 lượt"
+    },
+    "paper": {
+      "source": "Mục thực nghiệm của bài báo (khác với mã)",
+      "max_length": 128,
+      "learning_rate": 0.00003,
+      "keras_decay": 0.0,
+      "adam_epsilon": 1e-08,
+      "batch_size": 32,
+      "keras_epochs": 10,
+      "passes_per_epoch": 1,
+      "note": "Bài báo ghi Adam lr 3e-5, eps 1e-8, batch 32, max length 128, 10 epoch"
+    }
+  },
+  "architecture": {
+    "encoder_frozen": true,
+    "encoder_dropout_during_training": true,
+    "dropout_on_token_states": 0.5,
+    "bilstm_units": 768,
+    "bilstm_reads_padding": true,
+    "head": "Dense(2) softmax",
+    "loss": "binary_crossentropy on one-hot (Keras semantics)",
+    "init": "Keras: glorot_uniform kernels, orthogonal recurrent, forget-gate bias 1",
+    "truncation": "head (tokenizer truncation=True)"
+  },
+  "deviations_from_author_code": [
+    "Dùng split sạch của dự án (21.027/3.750/25.000, test chính thức, loại trùng/rò rỉ) thay cho gộp train+test rồi chia 81/9/10.",
+    "PyTorch thay TensorFlow; encoder chạy BF16 trên CUDA, head FP32.",
+    "Xáo trộn ngẫu nhiên toàn bộ train mỗi lượt thay cho shuffle(100) trên dữ liệu đã xáo trước.",
+    "Không áp dụng lỗi lấy nhãn test của mã gốc; dự đoán và nhãn được ghép theo review_id."
+  ],
+  "selection": "Không chọn checkpoint: đánh giá test mô hình cuối cùng sau đúng ngân sách epoch, như model.evaluate trong mã gốc. Validation chỉ để theo dõi.",
+  "metrics": ["accuracy", "macro_f1"]
+}

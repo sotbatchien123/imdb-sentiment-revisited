@@ -1,0 +1,19 @@
+{
+  "tag": "20261030_201350_cpu",
+  "outcome": "completed_max_batches",
+  "device": "cpu",
+  "cuda_launch_blocking": null,
+  "allow_shared_gpu": false,
+  "batches_completed": 3,
+  "epoch6_total_batches": 10514,
+  "mean_train_loss": 0.6919700155655543,
+  "reviews_completed": 6,
+  "seconds": 16.7,
+  "last_batch": null,
+  "error": null,
+  "gpu_before": null,
+  "gpu_after": null,
+  "peak_allocated_mib": null,
+  "started_at": "2026-10-30T20:14:11+0700",
+  "note": "Không lưu checkpoint; work_dirs/multichunk_v1 chỉ được đọc."
+}

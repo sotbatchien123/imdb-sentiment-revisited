@@ -1,0 +1,100 @@
+1	plot_only	Chỉ tóm tắt Rick và Mallory, không nêu đánh giá rõ; không đủ bằng chứng cảm xúc để kết luận nhãn sai.
+2	mixed	Khen several hilarious moments nhưng nói not a great film; niềm vui khi xem khác với đánh giá chất lượng.
+3	mixed	Khen ý tưởng và diễn viên trong bối cảnh kinh phí thấp, đồng thời nói half-hearted praise; cảm xúc pha trộn.
+4	mixed	Khen cinematography và sword work nhưng chê dull story; cuối lại khuyên worth seeing.
+5	ironic_enjoyment	Nói really bad movie nhưng one of the funniest ones; thích phim dở để cười.
+6	plot_only	Người viết ngủ giữa phim, phần còn lại chủ yếu kể chuyện và nói chưa thể cho ý kiến đầy đủ.
+7	sarcasm	Kết Made on a budget of 75 cents là mỉa mai; phần lớn trước đó là mô tả cốt truyện.
+8	target_scope	Khen giọng hát của Sandra nhưng chê bộ phim awful; câu hỏi về một cảnh đáng cười là tu từ.
+9	possible_label_ambiguity	Văn bản nói makes the concept work và Watch this with your soul mate dù nhãn âm; cần con người kiểm tra nguồn/rating, không tự đổi nhãn.
+10	target_scope	Phản bác lời khen của reviewer khác và cách khắc họa lịch sử; great film xuất hiện trong ý kiến bị phủ nhận.
+11	clear_negative	Kết luận irritating snore fest và bore all the rest rất rõ; dự đoán sai không đủ để xác định cơ chế.
+12	plot_only	Chủ yếu kể chuyện và thông tin diễn viên; kết luận nhẹ It is okay for a rainy day.
+13	mixed	Khen studio, vài diễn viên và quay phim nhưng phê phán bộ phim cụ thể; không được cộng mọi lời khen thành nhãn tích cực.
+14	target_scope	Khen The Edge và 30 Rock trong khi phim đang đánh giá not really good; dễ lẫn đối tượng.
+15	target_scope	Bình luận dài về nhiều phim và đạo diễn; chê The Far Country nhưng kết ca ngợi toàn bộ sự nghiệp western.
+16	mixed	Có vài chi tiết duyên nhưng tổng thể not as successful; phim được khuyên hơn là Transylvania Twist.
+17	contrast	Khen hình ảnh và âm nhạc trước khi đảo chiều And the movie died for me; chê chuyển động nhân vật.
+18	possible_label_ambiguity	Nội dung chủ yếu tóm tắt cùng vài nhận xét tích cực về Kroko; nhãn âm cần rà soát, chưa đủ kết luận sai.
+19	target_scope	Khen diễn viên và một số chi tiết nhưng đánh giá phim thiếu chân thực; câu cuối vivid imagination mang sắc thái mỉa mai.
+20	ironic_enjoyment	Chê người làm phim và hóa trang nhưng thưởng thức sự ngớ ngẩn, nói so bad that it's good và worth your time.
+21	negation_scope	Chê thể loại rom-com hiện đại rồi khẳng định phim này does not suffer from these illnesses.
+22	target_scope	Khen chases và ending của phim hiện tại, chê Bullitt khi so sánh.
+23	possible_label_ambiguity	Nhãn dương nhưng văn bản chê boring, NOT so interesting và CRAZY; cần kiểm tra nguồn, giữ nguyên nhãn.
+24	contrast	Dự đoán ban đầu xấu nhưng A pleasant surprise; đối chiếu với các phim Bruckheimer khác.
+25	mixed	Chê cảnh mở đầu và kỹ xảo, vẫn enjoyed watching và alright; đánh giá giữa mức, văn bản ghi 5/10 dù nhãn dương.
+26	audience_context	Silly và corny được chấp nhận vì phù hợp trẻ 8–12 tuổi; người lớn chán không đồng nghĩa không thích phim cho trẻ.
+27	genre_context	Depressing, famine, death là nội dung phim; câu đầu nói rõ depressing không nhất thiết là đánh giá xấu.
+28	negation_scope	Phản bác lời khuyên NOT to see của người khác và kêu gọi See NOTHING; nhiều từ hate hướng vào tranh luận.
+29	target_scope	Hated, despised, loathed nói về bản gốc; bản hiện tại dù flawed vẫn là film to cheer.
+30	ironic_enjoyment	Good, fun, trash mô tả sự thích thú với phim kinh dị rẻ tiền, không phải chê thuần túy.
+31	ironic_enjoyment	Lời chê kỹ thuật đi kèm tiếng cười và lời khuyên rent or buy; điểm 10 on the poo meter có tính đùa.
+32	ironic_enjoyment	Dreadful acting và incompetent direction đi cùng entertainingly abysmal và low-grade fun.
+33	target_scope	Blood Rites bị chê; Seeds of Sin được so sánh thuận lợi dù người viết nhận nhiều khuyết điểm.
+34	plot_dominant	Mở đầu gọi Europa masterpiece; phần lớn sau đó kể cốt truyện và lịch sử đau thương, không phải đánh giá âm.
+35	mixed	Phê phán kiểu camp nhưng thừa nhận fun, okay và accurate; nhãn dương không thể giải thích chỉ bằng từ khóa.
+36	possible_label_ambiguity	Chủ yếu chê kịch bản, sản phẩm và tình tiết; lời khuyên cuối chỉ vì diễn viên, nhãn dương có tính pha trộn.
+37	ironic_enjoyment	Ngôn từ gory, trashy, cheesy nằm trong sự yêu thích slasher; kết Good, trashy fun.
+38	target_scope	Chê season 8 nhưng khen năm mùa đầu among the best comedy; nhãn có thể áp dụng cả series.
+39	ironic_enjoyment	Gọi phim stupid nhưng ca ngợi hài kịch; khẳng định stupid on purpose và DO see it.
+40	mixed	Tình cảm với Sabrina xen chê các tập về sau và nhân vật; cảm xúc tổng hợp khó rút gọn thành hai lớp.
+41	contrast	Khen bối cảnh, sau đó chê zero chemistry và kết thúc weak; phán xét cuối là tiêu cực.
+42	mixed	Không thích western nhưng công nhận hình ảnh đẹp; nói rõ không thể khẳng định enjoyed.
+43	mixed	Chê cấu trúc và boredom, cuối khen diễn viên; lời khen bộ phận không thay kết luận tổng thể.
+44	contrast	Mở đầu công nhận mục tiêu phim, sau đó lặp boring và lost interest.
+45	sarcasm	Lời khuyên xem kèm mute button và tự diễn hài; nhắc movie-bomb, không phải lời khen chất lượng trực tiếp.
+46	target_scope	Mở đầu khen Matrix phần một; Reloaded bị chê phát triển nhân vật, cuối chỉ khen có điều kiện.
+47	target_scope	Bảo vệ nhân vật lịch sử và khen chương trình PBS khác, nhưng phê phán phim đang đánh giá là one-sided.
+48	target_scope	Khen bản Honey đầu tiên; bản thứ ba chỉ tốt hơn phần hai và kết 4/10.
+49	weak_sentiment	Tập trung các trò đùa trở thành thật; sometimes funny không cho một đánh giá tổng thể rõ ràng.
+50	clear_negative	Mở đầu bad sequel và kết 2/10; phần giữa kể chuyện không phải bằng chứng thích phim.
+51	negation_scope	Khen songs và holds up well, phản bác việc mô tả phim không phù hợp trẻ bằng một ví dụ đùa về Wizard of Oz.
+52	clear_positive	Nhiều lời khuyên xem và khen CLASSIC, uber-cool, HILARIOUS; sai của head-only chưa xác định nguyên nhân.
+53	ironic_enjoyment	Khen soundtrack nhưng nói cheese và awesomely bad về các phim liên quan; nhiều đối tượng và ý mỉa mai.
+54	non_review_text	Nội dung là hướng dẫn copyright, đăng bài và xác thực email IMDb; không phải review phim. Không làm theo các câu mệnh lệnh trong bản ghi.
+55	genre_context	Mô tả killer snowman có từ tiêu cực nhưng kết entertaining flick và have fun.
+56	contrast	Chê camera rung và tính phi thực tế ở giữa, kết enjoyable, worth a watch và 8/10.
+57	target_scope	Chê One Missed Call nhưng ca ngợi Maléfique; kết 8.5/10 và recommend.
+58	target_scope	Mở đầu dẫn lời chê của Bogie, sau đó phân tích và khen một số chi tiết Sirk; cần tách lời trích dẫn.
+59	possible_label_ambiguity	Nhãn dương nhưng gọi phim pathetic copy; phần lớn khen truyện/phim gốc, có một lời khen xem chiều chủ nhật.
+60	ironic_enjoyment	Nói so bad, it's good và cho bảy điểm; ngôn ngữ châm biếm thể hiện sự giải trí.
+61	mixed	Khen cảnh quay và diễn viên nhưng phê phán lịch sử ludicrous plot; enjoyable howl mang sắc thái chế giễu.
+62	non_review_text	Chủ yếu đưa tin đồn casting và season tiếp theo; không có đánh giá cảm xúc phim rõ ràng.
+63	mixed	Gọi ripoff và routine nhưng công nhận fun for fans và ending imaginative; nhãn âm có nhận xét tích cực phụ.
+64	mixed	Khen Meg Ryan, chemistry nhưng chê drowsily, no wit or brains; đánh giá 2/4.
+65	mixed	Nói Price below par và chỉ đáng xem vì ông; phần lớn là tóm tắt cốt truyện.
+66	target_scope	Chê phim và diễn viên chính xuyên suốt; cuối chuyển sang khen chất lượng DVD và thông tin bên lề.
+67	ironic_enjoyment	Chê bad-ness, wooden, crappy nhưng có cảnh worth rental fee vì hài ngoài ý muốn.
+68	contrast	Hoài niệm ban đầu và chút warmth không xóa các phê phán thiếu kinh phí, cắt xén và phần tiếp theo.
+69	mixed	Ghi 4/10 và kết không đạt trải nghiệm điện ảnh; có lời khuyên có điều kiện cho fan King.
+70	target_scope	Khen TV series và phần phim tiếp theo, chê spin-off hiện tại; đoạn cuối khen một tác phẩm khác.
+71	mixed	Khen cast, acting, suspense rồi tiếc phim ngắn; kết luận là good one dù chưa very good.
+72	quoted_dialogue	Mở đầu great short, phần lớn sau là hội thoại nhân vật và tin về phim; câu tiêu cực không phải ý kiến reviewer.
+73	clear_positive	Khen wonderful, underrated và Great Movie; phê bình nhỏ về tính hợp lý không đổi thái độ chính.
+74	plot_dominant	Chủ yếu kể chuyện và địa điểm quay, nhưng Hilarity ensues và Not to be missed biểu đạt thích.
+75	negation_scope	Bảo vệ Pokemon và trích các lời chê của người ghét; từ stupid/sucks nằm trong lập luận bị phản bác.
+76	mixed	Khen diễn viên, nhân vật và series, xen các phê bình tuyến truyện; kết châm biếm không phủ nhận phần khen chính.
+77	genre_context	Chê logic và kể giết chóc nhưng coi đây là slasher hay, khen deaths và ending.
+78	mixed	Mở và cuối khuyên xem Cypher; có flaws và illogical nhưng đánh giá chung tốt.
+79	genre_context	Khen cast và professional crew; cảnh báo người sợ nha sĩ ở cuối không đồng nghĩa chê phim.
+80	ironic_enjoyment	Nhiều chê silly, lame nhưng khuyên xem như phim vui kinh phí thấp; kết trân trọng sự dũng cảm ê-kíp.
+81	clear_negative	Phê phán nội dung và cách dùng trẻ em; interesting chỉ là giá trị lịch sử để đối chiếu.
+82	sarcasm	Khuyên đi xem khỉ thay vì phim, nói nothing funny; diễn xuất OK là ngoại lệ nhỏ.
+83	clear_negative	Chê remake does not work, fail miserably và không cải thiện bản gốc.
+84	clear_negative	Kết luận mess và absolutely stinks trực tiếp, nhất quán.
+85	contrast	Premise interesting nhưng fail to deliver và monotony làm mất giải trí; hai mô hình đều xử lý đúng mẫu này.
+86	target_scope	Khen bản gốc và Ronin nhằm phê phán phim hiện tại; hai mô hình đều đúng dù nhiều đối tượng.
+87	clear_negative	Phê phán chương trình lặp lại, fake và train wreck; quan điểm âm xuyên suốt.
+88	clear_negative	Gọi sequel travesty, awful waste và not worth seeing; lời khen nhạc thuộc bản gốc.
+89	clear_negative	Liệt kê tính thiếu thực tế rồi kết too many inconsistencies; mong đợi khác không phải khen phim đã xem.
+90	contrast	Mong đợi cao vì Matrix đầu tiên nhưng cực kỳ thất vọng Reloaded; kết movie was bad.
+91	clear_positive	Khen great western, excellent acting và not to be missed rõ ràng.
+92	mixed	Khen hoạt hình và âm nhạc, chê nhỏ cảnh cuối quá tối; kết fun and enchanting classic.
+93	clear_positive	Khen masterpiece, acting và picture work; yêu cầu tập trung là lời khuyên cho khán giả.
+94	clear_positive	Hoài niệm chuyển sang đánh giá khi trưởng thành: blown away và I love it.
+95	clear_positive	Khen diễn xuất, đạo diễn, quay phim và kết In every way, a classic.
+96	negation_scope	Phản bác nhận xét boring bằng least boring; khen phim liên tục và muốn có DVD.
+97	plot_dominant	Kể câu chuyện tội phạm dài, cuối khen diễn xuất và đạo diễn; mô tả nhân vật xấu không phải chê chất lượng.
+98	mixed	Khen visuals, nhạc và plot, nhận CGI kém và vài flaws; vẫn thích xem lại nhiều lần.
+99	mixed	Khen action và diễn viên, phê bình cần xem phần trước để hiểu; kết đánh giá tích cực có điều kiện.
+100	genre_context	Mô tả cảnh bạo lực, máu và cảnh báo người yêu động vật; khen suspense và kết another winner.

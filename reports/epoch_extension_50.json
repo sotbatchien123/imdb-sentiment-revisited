@@ -1,0 +1,27 @@
+{
+  "reason": "User requested 50 epochs for every model; early stopping disabled.",
+  "old_max_epochs": 15,
+  "new_max_epochs": 50,
+  "early_stopping": false,
+  "old_signature": "5b6c0ef0bb83fbc8a86708fef7e40f9667308a56b40b8048a0dd84714ccbea25",
+  "new_signature": "866cb4f6f6dfb0e27a295d5df5f5c40bc0b049e6a5b2f7cdd488807a126b7232",
+  "changed_config_fields": [
+    "max_epochs",
+    "early_stopping"
+  ],
+  "checkpoints": [
+    {
+      "path": "D:\\MovieReview\\work_dirs\\imdb_full_v1\\mean_seed42\\best.pt",
+      "epoch": 6,
+      "backup": "D:\\MovieReview\\reports\\epoch_extension_50_20261011_230334\\mean_seed42\\best.pt",
+      "weights_optimizer_preserved": true
+    },
+    {
+      "path": "D:\\MovieReview\\work_dirs\\imdb_full_v1\\mean_seed42\\latest.pt",
+      "epoch": 6,
+      "backup": "D:\\MovieReview\\reports\\epoch_extension_50_20261011_230334\\mean_seed42\\latest.pt",
+      "weights_optimizer_preserved": true
+    }
+  ],
+  "backup_directory": "D:\\MovieReview\\reports\\epoch_extension_50_20261011_230334"
+}

@@ -1,0 +1,174 @@
+{
+  "runs": [
+    {
+      "seed": 42,
+      "best_epoch": 2,
+      "best_validation": {
+        "loss": 0.1806300411383311,
+        "accuracy": 0.9426666666666667,
+        "macro_f1": 0.9426632376734495,
+        "confusion_matrix": [
+          [
+            1782,
+            85
+          ],
+          [
+            130,
+            1753
+          ]
+        ],
+        "examples": 3750,
+        "seconds": 16.942260265350342
+      },
+      "test": {
+        "accuracy": 0.94184,
+        "macro_f1": 0.9418366404843543,
+        "confusion_matrix": [
+          [
+            11868,
+            632
+          ],
+          [
+            822,
+            11678
+          ]
+        ],
+        "loss": 0.17250269637197255,
+        "length_groups": {
+          "short": {
+            "examples": 21914,
+            "accuracy": 0.9430957378844574,
+            "macro_f1": 0.9430883901026654
+          },
+          "long": {
+            "examples": 3086,
+            "accuracy": 0.9329228775113415,
+            "macro_f1": 0.9328983504579611
+          }
+        }
+      },
+      "training_seconds": 1145.6565463542938,
+      "signature": "23a6aa220a3d2395cc30bbe4f5c93b46a59fdb02cff2e27da5a35778002d4393"
+    },
+    {
+      "seed": 43,
+      "best_epoch": 2,
+      "best_validation": {
+        "loss": 0.1767358503262202,
+        "accuracy": 0.9450666666666667,
+        "macro_f1": 0.9450665260369733,
+        "confusion_matrix": [
+          [
+            1775,
+            92
+          ],
+          [
+            114,
+            1769
+          ]
+        ],
+        "examples": 3750,
+        "seconds": 13.837151050567627
+      },
+      "test": {
+        "accuracy": 0.94472,
+        "macro_f1": 0.9447198977539228,
+        "confusion_matrix": [
+          [
+            11792,
+            708
+          ],
+          [
+            674,
+            11826
+          ]
+        ],
+        "loss": 0.17046224723495543,
+        "length_groups": {
+          "short": {
+            "examples": 21914,
+            "accuracy": 0.9456511818928539,
+            "macro_f1": 0.9456509318902666
+          },
+          "long": {
+            "examples": 3086,
+            "accuracy": 0.9381075826312378,
+            "macro_f1": 0.9380649133876966
+          }
+        }
+      },
+      "training_seconds": 1158.5874524116516,
+      "signature": "23a6aa220a3d2395cc30bbe4f5c93b46a59fdb02cff2e27da5a35778002d4393"
+    },
+    {
+      "seed": 44,
+      "best_epoch": 2,
+      "best_validation": {
+        "loss": 0.17990486447811127,
+        "accuracy": 0.9424,
+        "macro_f1": 0.9423927737495392,
+        "confusion_matrix": [
+          [
+            1746,
+            121
+          ],
+          [
+            95,
+            1788
+          ]
+        ],
+        "examples": 3750,
+        "seconds": 106.46542310714722
+      },
+      "test": {
+        "accuracy": 0.94472,
+        "macro_f1": 0.9447124575407676,
+        "confusion_matrix": [
+          [
+            11663,
+            837
+          ],
+          [
+            545,
+            11955
+          ]
+        ],
+        "loss": 0.1690905442249775,
+        "length_groups": {
+          "short": {
+            "examples": 21914,
+            "accuracy": 0.9458337136077394,
+            "macro_f1": 0.9458299359882214
+          },
+          "long": {
+            "examples": 3086,
+            "accuracy": 0.9368114063512638,
+            "macro_f1": 0.9367324763720606
+          }
+        }
+      },
+      "training_seconds": 2505.590044736862,
+      "signature": "23a6aa220a3d2395cc30bbe4f5c93b46a59fdb02cff2e27da5a35778002d4393"
+    }
+  ],
+  "aggregate": {
+    "accuracy": {
+      "mean": 0.94376,
+      "sample_std": 0.0016627687752661185
+    },
+    "macro_f1": {
+      "mean": 0.9437563319263482,
+      "sample_std": 0.0016625057183485062
+    },
+    "seeds": [
+      42,
+      43,
+      44
+    ]
+  },
+  "references_macro_f1": {
+    "reproduction_code_variant": 0.8941,
+    "frozen_bilstm_headtail": 0.9187,
+    "frozen_bilstm_head": 0.9014
+  }
+}

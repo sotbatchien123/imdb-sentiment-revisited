@@ -1,0 +1,76 @@
+{
+  "checked_at_utc": "2026-10-11T13:50:43.862541+00:00",
+  "code_commit": "c4cbd9a179a9526ee952d3e58247d3f1466ff0c6",
+  "model_revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d",
+  "model_total_bytes": 2482655255,
+  "all_files_verified": true,
+  "files": [
+    {
+      "file": ".gitattributes",
+      "bytes": 1284,
+      "algorithm": "sha1",
+      "hash": "3719d3a1698904bbe84e8b3250d812f2853d847a",
+      "verified": true
+    },
+    {
+      "file": "README.md",
+      "bytes": 7667,
+      "algorithm": "sha1",
+      "hash": "489890f6973db2448e698120b132fc8e2fcfb304",
+      "verified": true
+    },
+    {
+      "file": "config.json",
+      "bytes": 846,
+      "algorithm": "sha1",
+      "hash": "91ba54326eccfdb17a06a7d110df3d71f39b84b8",
+      "verified": true
+    },
+    {
+      "file": "generation_config.json",
+      "bytes": 189,
+      "algorithm": "sha1",
+      "hash": "4c6d168201607a22255bee55a6ed092b0e3ed7a1",
+      "verified": true
+    },
+    {
+      "file": "pytorch_model.bin",
+      "bytes": 2460457927,
+      "algorithm": "sha256",
+      "hash": "c266c2cfd19758b6d09c1fc31ecdf1e485509035f6b51dfe84f1ada83eefcc42",
+      "verified": true
+    },
+    {
+      "file": "sentencepiece.bpe.model",
+      "bytes": 4852054,
+      "algorithm": "sha256",
+      "hash": "14bb8dfb35c0ffdea7bc01e56cea38b9e3d5efcdcb9c251d6b40538e1aab555a",
+      "verified": true
+    },
+    {
+      "file": "special_tokens_map.json",
+      "bytes": 3548,
+      "algorithm": "sha1",
+      "hash": "02fba84e401dd2017999a39cac2c1278591c3a03",
+      "verified": true
+    },
+    {
+      "file": "tokenizer.json",
+      "bytes": 17331176,
+      "algorithm": "sha256",
+      "hash": "e316b82de11d0f951f370943b3c438311629547285129b0b81dadabd01bca665",
+      "verified": true
+    },
+    {
+      "file": "tokenizer_config.json",
+      "bytes": 564,
+      "algorithm": "sha1",
+      "hash": "742aa330eae62f661fe28ff3fdd1d216d1481294",
+      "verified": true
+    }
+  ],
+  "translation_script_syntax": "passed",
+  "inference_test": "not_run_dependencies_not_installed",
+  "dataset_files": [],
+  "training": "not_started"
+}

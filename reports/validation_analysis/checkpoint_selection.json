@@ -1,0 +1,16 @@
+{
+  "bilstm": {
+    "model": "bilstm",
+    "seed": 43,
+    "epoch": 41,
+    "validation_macro_f1": 0.9103983688520836,
+    "checkpoint": "work_dirs\\imdb_full_v1\\bilstm_seed43\\best.pt"
+  },
+  "bilstm_headtail": {
+    "model": "bilstm_headtail",
+    "seed": 42,
+    "epoch": 49,
+    "validation_macro_f1": 0.9173321811276445,
+    "checkpoint": "work_dirs\\imdb_full_v1\\bilstm_headtail_seed42\\best.pt"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "dataset": "data/processed/imdb_full_v1",
+  "encoder": "checkpoints/bert-base-uncased",
+  "output": "work_dirs/imdb_full_v1",
+  "report": "reports/full_imdb_results.json",
+  "generate_full_report": true,
+  "max_length": 256,
+  "batch_size": 8,
+  "gradient_accumulation": 4,
+  "learning_rate": 0.0001,
+  "weight_decay": 0.01,
+  "dropout": 0.5,
+  "lstm_hidden_size": 768,
+  "max_epochs": 50,
+  "min_epochs": 5,
+  "patience": 3,
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "models": [
+    "mean",
+    "bilstm",
+    "bilstm_headtail"
+  ],
+  "encoder_frozen": true,
+  "encoder_eval_mode": true,
+  "encoder_precision": "bfloat16",
+  "head_precision": "float32",
+  "early_stopping": false
+}

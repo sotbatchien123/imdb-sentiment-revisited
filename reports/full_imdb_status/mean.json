@@ -1,0 +1,250 @@
+{
+  "model": "mean",
+  "status": "completed",
+  "updated_at": "2026-10-15T03:31:44.861391+07:00",
+  "source_updated_at": "2026-10-15T03:31:40+0700",
+  "training_pid": 43420,
+  "training_process_alive": false,
+  "completed_runs": 3,
+  "total_runs": 3,
+  "metrics_unit": "fraction_0_1",
+  "max_epochs_per_run": 50,
+  "early_stopping": {
+    "enabled": false,
+    "minimum_epochs": 5,
+    "patience": 3,
+    "metric": "validation_macro_f1"
+  },
+  "seeds": [
+    {
+      "seed": 42,
+      "status": "completed",
+      "completed_epochs": 50,
+      "epoch": null,
+      "max_epochs": 50,
+      "batch": null,
+      "total_batches": null,
+      "best_validation_macro_f1": 0.8506479319432496,
+      "latest_train_loss": 0.37518853285334536,
+      "latest_checkpoint": "D:\\MovieReview\\work_dirs\\imdb_full_v1\\mean_seed42\\latest.pt",
+      "best_checkpoint": "D:\\MovieReview\\work_dirs\\imdb_full_v1\\mean_seed42\\best.pt",
+      "history_file": "D:\\MovieReview\\work_dirs\\imdb_full_v1\\mean_seed42\\history.json",
+      "test_metrics_file": "D:\\MovieReview\\work_dirs\\imdb_full_v1\\mean_seed42\\test_metrics.json",
+      "test_metrics": {
+        "loss": 0.3351405851227045,
+        "accuracy": 0.85716,
+        "macro_f1": 0.8571361522522053,
+        "confusion_matrix": [
+          [
+            10876,
+            1624
+          ],
+          [
+            1947,
+            10553
+          ]
+        ],
+        "classification_report": {
+          "negative": {
+            "precision": 0.8481634562894799,
+            "recall": 0.87008,
+            "f1-score": 0.8589819531651068,
+            "support": 12500.0
+          },
+          "positive": {
+            "precision": 0.86663381785333,
+            "recall": 0.84424,
+            "f1-score": 0.8552903513393038,
+            "support": 12500.0
+          },
+          "accuracy": 0.85716,
+          "macro avg": {
+            "precision": 0.857398637071405,
+            "recall": 0.8571599999999999,
+            "f1-score": 0.8571361522522053,
+            "support": 25000.0
+          },
+          "weighted avg": {
+            "precision": 0.857398637071405,
+            "recall": 0.85716,
+            "f1-score": 0.8571361522522054,
+            "support": 25000.0
+          }
+        },
+        "seconds": 145.01546812057495,
+        "examples": 25000,
+        "model": "mean",
+        "seed": 42,
+        "best_epoch": 48,
+        "signature": "866cb4f6f6dfb0e27a295d5df5f5c40bc0b049e6a5b2f7cdd488807a126b7232",
+        "training_seconds": 7214.48704957962,
+        "length_groups": {
+          "short": {
+            "examples": 14974,
+            "accuracy": 0.884867102978496,
+            "macro_f1": 0.8848661971921441
+          },
+          "long": {
+            "examples": 10026,
+            "accuracy": 0.8157789746658688,
+            "macro_f1": 0.8156341516072281
+          }
+        }
+      }
+    },
+    {
+      "seed": 43,
+      "status": "completed",
+      "completed_epochs": 50,
+      "epoch": null,
+      "max_epochs": 50,
+      "batch": null,
+      "total_batches": null,
+      "best_validation_macro_f1": 0.8506615267682813,
+      "latest_train_loss": 0.37478091609247255,
+      "latest_checkpoint": "D:\\MovieReview\\work_dirs\\imdb_full_v1\\mean_seed43\\latest.pt",
+      "best_checkpoint": "D:\\MovieReview\\work_dirs\\imdb_full_v1\\mean_seed43\\best.pt",
+      "history_file": "D:\\MovieReview\\work_dirs\\imdb_full_v1\\mean_seed43\\history.json",
+      "test_metrics_file": "D:\\MovieReview\\work_dirs\\imdb_full_v1\\mean_seed43\\test_metrics.json",
+      "test_metrics": {
+        "loss": 0.33474908097684386,
+        "accuracy": 0.85752,
+        "macro_f1": 0.8575156584451191,
+        "confusion_matrix": [
+          [
+            10650,
+            1850
+          ],
+          [
+            1712,
+            10788
+          ]
+        ],
+        "classification_report": {
+          "negative": {
+            "precision": 0.8615110823491344,
+            "recall": 0.852,
+            "f1-score": 0.8567291448797362,
+            "support": 12500.0
+          },
+          "positive": {
+            "precision": 0.8536160784934325,
+            "recall": 0.86304,
+            "f1-score": 0.8583021720105021,
+            "support": 12500.0
+          },
+          "accuracy": 0.85752,
+          "macro avg": {
+            "precision": 0.8575635804212834,
+            "recall": 0.8575200000000001,
+            "f1-score": 0.8575156584451191,
+            "support": 25000.0
+          },
+          "weighted avg": {
+            "precision": 0.8575635804212834,
+            "recall": 0.85752,
+            "f1-score": 0.857515658445119,
+            "support": 25000.0
+          }
+        },
+        "seconds": 73.2301995754242,
+        "examples": 25000,
+        "model": "mean",
+        "seed": 43,
+        "best_epoch": 49,
+        "signature": "866cb4f6f6dfb0e27a295d5df5f5c40bc0b049e6a5b2f7cdd488807a126b7232",
+        "training_seconds": 3820.2069461345673,
+        "length_groups": {
+          "short": {
+            "examples": 14974,
+            "accuracy": 0.885735274475758,
+            "macro_f1": 0.8857182056528503
+          },
+          "long": {
+            "examples": 10026,
+            "accuracy": 0.8153800119688809,
+            "macro_f1": 0.815376292704127
+          }
+        }
+      }
+    },
+    {
+      "seed": 44,
+      "status": "completed",
+      "completed_epochs": 50,
+      "epoch": null,
+      "max_epochs": 50,
+      "batch": null,
+      "total_batches": null,
+      "best_validation_macro_f1": 0.8501224195809886,
+      "latest_train_loss": 0.3757868300631388,
+      "latest_checkpoint": "D:\\MovieReview\\work_dirs\\imdb_full_v1\\mean_seed44\\latest.pt",
+      "best_checkpoint": "D:\\MovieReview\\work_dirs\\imdb_full_v1\\mean_seed44\\best.pt",
+      "history_file": "D:\\MovieReview\\work_dirs\\imdb_full_v1\\mean_seed44\\history.json",
+      "test_metrics_file": "D:\\MovieReview\\work_dirs\\imdb_full_v1\\mean_seed44\\test_metrics.json",
+      "test_metrics": {
+        "loss": 0.3363673818683624,
+        "accuracy": 0.85672,
+        "macro_f1": 0.8567017669621054,
+        "confusion_matrix": [
+          [
+            10850,
+            1650
+          ],
+          [
+            1932,
+            10568
+          ]
+        ],
+        "classification_report": {
+          "negative": {
+            "precision": 0.8488499452354874,
+            "recall": 0.868,
+            "f1-score": 0.8583181710307729,
+            "support": 12500.0
+          },
+          "positive": {
+            "precision": 0.8649533475200524,
+            "recall": 0.84544,
+            "f1-score": 0.855085362893438,
+            "support": 12500.0
+          },
+          "accuracy": 0.85672,
+          "macro avg": {
+            "precision": 0.8569016463777699,
+            "recall": 0.8567199999999999,
+            "f1-score": 0.8567017669621054,
+            "support": 25000.0
+          },
+          "weighted avg": {
+            "precision": 0.8569016463777699,
+            "recall": 0.85672,
+            "f1-score": 0.8567017669621054,
+            "support": 25000.0
+          }
+        },
+        "seconds": 130.26998448371887,
+        "examples": 25000,
+        "model": "mean",
+        "seed": 44,
+        "best_epoch": 40,
+        "signature": "866cb4f6f6dfb0e27a295d5df5f5c40bc0b049e6a5b2f7cdd488807a126b7232",
+        "training_seconds": 7561.102854251862,
+        "length_groups": {
+          "short": {
+            "examples": 14974,
+            "accuracy": 0.8839321490583678,
+            "macro_f1": 0.8839320475988635
+          },
+          "long": {
+            "examples": 10026,
+            "accuracy": 0.8160781966886096,
+            "macro_f1": 0.8159466869765719
+          }
+        }
+      }
+    }
+  ],
+  "source_status": "D:\\MovieReview\\work_dirs\\imdb_full_v1\\status_live.json",
+  "note": "Validation metrics are not test results. Null means not yet available. Observer does not launch training."
+}
