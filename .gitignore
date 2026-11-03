@@ -40,3 +40,6 @@ desktop.ini
 
 # Ghi chú nội bộ của máy làm việc (không công bố)
 GHI_NHO.md
+
+# Gói tải lên Overleaf (tạo lại được từ main.tex và figures/)
+reports/ieee_paper/overleaf_upload.zip

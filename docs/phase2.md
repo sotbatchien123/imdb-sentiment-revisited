@@ -4,7 +4,7 @@ Phạm vi đã được chấp nhận: phân tích lỗi validation; pilot đọ
 
 ## Mở kết quả
 
-- Demo đang phục vụ tại http://127.0.0.1:8765. Khi cần mở lại, chạy `run-demo.cmd` rồi truy cập địa chỉ này. Demo dùng CPU, không chiếm GPU huấn luyện. Nếu cổng đang được dùng bởi demo, chỉ cần mở trình duyệt; không khởi động bản thứ hai.
+- Demo đang phục vụ tại http://127.0.0.1:8765. Khi cần mở lại, chạy `run/run-demo.cmd` rồi truy cập địa chỉ này. Demo dùng CPU, không chiếm GPU huấn luyện. Nếu cổng đang được dùng bởi demo, chỉ cần mở trình duyệt; không khởi động bản thứ hai.
 - Báo cáo: `reports/validation_analysis/report.md`.
 - Bản đọc 100 trường hợp: `reports/validation_analysis/index.html`.
 - JSON đủ 100 trường hợp đã đọc/ghi chú: `reports/validation_analysis/cases_100_reviewed.json`.
@@ -35,7 +35,7 @@ Mốc tham chiếu: overall 0,9173321811; long 0,9036980004. Đây là ngưỡng
 - Mỗi seed có `latest.pt` (optimizer/RNG/history), `best.pt`, `best_validation_predictions.json`, `result.json` khi hoàn tất.
 - `smoke_results.json`: kiểm tra token coverage, pooling review, backward review train dài nhất, frozen encoder, checkpoint và cập nhật tiếp sau restore optimizer/RNG.
 - Log nền: `logs/multichunk_*.out.log` và `.err.log`.
-- Để tạm dừng có lưu trạng thái: tạo file rỗng `work_dirs/multichunk_v1/PAUSE`; runner dừng tại ranh giới epoch sau khi lưu. Xóa marker khi đã muốn tiếp tục rồi chạy `resume-multichunk.cmd`. Không chạy hai runner đồng thời.
+- Để tạm dừng có lưu trạng thái: tạo file rỗng `work_dirs/multichunk_v1/PAUSE`; runner dừng tại ranh giới epoch sau khi lưu. Xóa marker khi đã muốn tiếp tục rồi chạy `run/resume-multichunk.cmd`. Không chạy hai runner đồng thời.
 - Khi tắt đột ngột, epoch đang dở sẽ chạy lại; những epoch đã lưu được giữ. Cấu hình, dữ liệu và mã nguồn có signature: không sửa các file `train_multichunk.py`, `phase2_core.py` hoặc config giữa chừng rồi tiếp tục cùng thư mục.
 - Máy phải thức và có nguồn điện để job chạy liên tục. Không tự thay cấu hình sleep của hệ điều hành.
 

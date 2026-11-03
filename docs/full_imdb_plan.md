@@ -28,9 +28,9 @@ Lượt Horror dừng ở CLS seed43 do Windows khóa file status.json khi cập
 
 ## Vận hành
 
-- run-full-imdb.cmd: bắt đầu hoặc tiếp tục sau checkpoint epoch cuối.
-- pause-full-imdb.cmd: dừng sau epoch; chờ stage paused mới tắt máy.
-- status-full-imdb.cmd: đọc trạng thái file dự phòng cập nhật.
+- run/run-full-imdb.cmd: bắt đầu hoặc tiếp tục sau checkpoint epoch cuối.
+- run/pause-full-imdb.cmd: dừng sau epoch; chờ stage paused mới tắt máy.
+- run/status-full-imdb.cmd: đọc trạng thái file dự phòng cập nhật.
 - Chạy lại khi crash giữa epoch sẽ lặp lại epoch chưa lưu, không phải tiếp tục minibatch chính xác.
 - Không tự chạy SEG song song. Không có tác vụ tự chạy lúc đăng nhập.
 - reports/full_imdb_report.md và full_imdb_progress_report.json: cập nhật sau mỗi lượt hoàn tất, ghi rõ báo cáo tạm/final.

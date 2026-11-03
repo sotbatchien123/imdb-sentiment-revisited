@@ -37,10 +37,10 @@ Thư mục data/processed/imdb_horror_v1 là kiểm tra trung gian chỉ lọc g
 
 ## Dừng và chạy tiếp
 
-- run-baselines.cmd: khởi động nền hoặc chạy tiếp checkpoint epoch gần nhất. Có khóa hệ điều hành ngăn hai tiến trình training đồng thời.
-- pause-baselines.cmd: yêu cầu dừng sau epoch đang chạy và lưu checkpoint. Chờ status.json hiển thị paused rồi mới tắt máy.
+- run/run-baselines.cmd: khởi động nền hoặc chạy tiếp checkpoint epoch gần nhất. Có khóa hệ điều hành ngăn hai tiến trình training đồng thời.
+- run/pause-baselines.cmd: yêu cầu dừng sau epoch đang chạy và lưu checkpoint. Chờ status.json hiển thị paused rồi mới tắt máy.
 - Nếu tiến trình dừng đột ngột giữa epoch: chạy tiếp từ cuối epoch trước, không khẳng định tiếp tục đúng minibatch.
-- status-baselines.cmd: xem tiến độ. Trạng thái chi tiết: work_dirs/horror_frozen_bert_v1/status.json.
+- run/status-baselines.cmd: xem tiến độ. Trạng thái chi tiết: work_dirs/horror_frozen_bert_v1/status.json.
 - Chưa thiết lập tự chạy khi đăng nhập hoặc khởi động máy.
 
 ## Kết quả ở đâu?
