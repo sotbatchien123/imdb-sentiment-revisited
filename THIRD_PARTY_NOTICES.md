@@ -90,6 +90,7 @@ Mọi trọng số mô hình nằm trong `checkpoints/` và **bị loại khỏi
 | bert-base-uncased | https://huggingface.co/google-bert/bert-base-uncased (`86b5e0934494bd15c9632b12f734a8a67f723594`) | Apache-2.0 | Encoder cho tái lập, baseline và hướng B | Devlin et al., 2019, *BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding*, NAACL |
 | roberta-large | https://huggingface.co/FacebookAI/roberta-large (`722cf37b1afa9454edce342e7895e588b6ff1d59`) | MIT | Encoder cho hướng D | Liu et al., 2019, *RoBERTa: A Robustly Optimized BERT Pretraining Approach*, arXiv:1907.11692 |
 | nllb-200-distilled-600M | https://huggingface.co/facebook/nllb-200-distilled-600M (`f8d333a098d19b4fd9a8b18f94170487ad3f821d`) | CC BY-NC 4.0 (chỉ phi thương mại) | Dịch Anh–Việt (chưa dùng cho kết quả) | NLLB Team, 2022, *No Language Left Behind*, arXiv:2207.04672 |
+| Qwen3-8B (bản GGUF Q4_K_M) | https://huggingface.co/Qwen/Qwen3-8B-GGUF | Apache-2.0 | Gán nhãn silver theo khía cạnh cho phần ABSA (chạy cục bộ). Nhãn silver nằm trong `data/` và không được phân phối lại | Qwen Team, 2025, *Qwen3 Technical Report*, arXiv:2505.09388 |
 
 Phương pháp cắt đầu–cuối 512 token theo: Sun, Qiu, Xu, Huang, 2019, *How to Fine-Tune BERT for Text Classification?*, CCL 2019, arXiv:1905.05583.
 
@@ -105,6 +106,8 @@ Các thư viện không nằm trong repo. Chúng được cài qua `requirements
 | sentencepiece | Apache-2.0 |
 | matplotlib (vẽ biểu đồ báo cáo) | Matplotlib License (dựa trên PSF) |
 | docx (npm, tạo file Word báo cáo) | MIT |
+| llama.cpp (chạy Qwen3-8B để gán nhãn, cài riêng, không nằm trong repo) | MIT |
+| openpyxl (file Excel kiểm tay) | MIT |
 
 ## 6. Lưu ý khi sử dụng
 

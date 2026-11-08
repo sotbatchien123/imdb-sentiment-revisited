@@ -114,3 +114,12 @@ khi nhóm kiểm tay xong một phần tập test.
   review (100 chung + 100 riêng). Script `prepare` không ghi đè file đã có, trừ khi thêm `--overwrite`.
 - `absa_human_check.py` cần openpyxl, có trong anaconda nhưng `.venv-train` không có.
 - Bài báo ABSA: `reports/ieee_paper_absa/` (xem README trong đó).
+
+## 6. Demo
+
+```bat
+run\absa-demo.cmd                 :: http://127.0.0.1:8766, CPU; thêm --device cuda nếu GPU rảnh
+```
+
+Demo nạp best.pt của RoBERTa-large và BERT-base (seed có Macro-F1 validation cao nhất), hiện nhãn và
+xác suất cho 6 khía cạnh. Mã: `scripts/absa_demo_server.py`, giao diện: `demo_absa/`.

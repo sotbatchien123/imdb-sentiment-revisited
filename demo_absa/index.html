@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MovieReview · Cảm xúc theo khía cạnh</title>
+<link rel="stylesheet" href="/style.css">
+<script src="/app.js" defer></script>
+</head>
+<body>
+<main>
+<header><span class="eyebrow">MOVIEREVIEW / ABSA</span><span class="local" id="device">● Chạy tại máy</span></header>
+
+<section class="intro">
+  <h1>Khen diễn viên,<br>chê kịch bản?</h1>
+  <p>Một review hiếm khi chỉ khen hoặc chỉ chê. Demo này đọc review tiếng Anh và cho biết người viết nghĩ gì về
+  <strong>diễn xuất, cốt truyện, hình ảnh, âm thanh, đạo diễn</strong> và <strong>cả bộ phim</strong>.</p>
+</section>
+
+<section class="input-panel">
+  <div class="row"><label for="review">REVIEW TIẾNG ANH</label><span id="count">0 / 20.000 ký tự</span></div>
+  <textarea id="review" maxlength="20000" placeholder="Nhập hoặc dán review phim bằng tiếng Anh…" spellcheck="false"></textarea>
+  <div class="row actions">
+    <div>
+      <button class="example" id="ex-mixed">Ví dụ khen chê lẫn lộn</button>
+      <button class="example" id="ex-tech">Ví dụ về kỹ thuật</button>
+      <button class="example" id="ex-short">Ví dụ ngắn</button>
+    </div>
+    <button id="run" class="primary">Phân tích →</button>
+  </div>
+  <p class="hint">Ví dụ do nhóm tự viết để minh hoạ. Mô hình học trên review IMDb tiếng Anh.</p>
+</section>
+
+<p id="message" role="status" aria-live="polite">Nhập review để bắt đầu.</p>
+<section id="results" class="aspects"></section>
+
+<section class="legend" id="legend" hidden>
+  <span><i class="dot positive"></i>Khen</span>
+  <span><i class="dot negative"></i>Chê</span>
+  <span><i class="dot neutral"></i>Trung lập / lẫn lộn</span>
+  <span><i class="dot none"></i>Không nhắc tới</span>
+</section>
+
+<footer>
+  <p id="models">Đang nạp thông tin mô hình…</p>
+  <p>Mô hình học từ nhãn do Qwen3-8B gán (nhãn silver), chưa phải nhãn người. Trên tập test, RoBERTa-large đạt
+  Macro-F1 trung bình 74,2% so với nhãn này; lớp "trung lập" là lớp khó nhất. Xác suất hiển thị chưa được hiệu chỉnh.
+  Review dài hơn 512 token chỉ được đọc 128 token đầu và 382 token cuối. Demo chạy cục bộ, không gửi review ra ngoài.</p>
+</footer>
+</main>
+</body>
+</html>
