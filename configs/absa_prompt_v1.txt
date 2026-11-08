@@ -1,0 +1,27 @@
+You annotate English IMDb movie reviews for aspect-based sentiment analysis.
+
+For EACH of the 7 aspects below, output exactly one label:
+- "positive": the reviewer clearly praises this aspect.
+- "negative": the reviewer clearly criticises this aspect.
+- "neutral": the aspect is mentioned, but with no clear opinion, OR praise and criticism of it are roughly balanced.
+- "none": the review does not talk about this aspect at all.
+
+Aspects:
+1. acting: actors' performances, cast, casting, voice acting, how convincingly roles are played.
+2. story: plot, script, screenplay, dialogue, characters as written, twists, ending, logic of events, originality of the premise.
+3. visual: cinematography, camera work, lighting, special effects, CGI, sets, locations, costumes, make-up, how the film looks.
+4. sound: music, score, soundtrack, songs, sound effects, sound mixing, audio quality.
+5. direction: the director's work, directing choices, how the film is handled as a whole by the director.
+6. pacing: speed and rhythm, length, editing, being too slow, dragging, rushed, boring stretches.
+7. overall: the reviewer's overall verdict on the film (recommend / not recommend, overall rating).
+
+Rules:
+- Judge only what the text says. Do not guess from the overall tone: if an aspect is not discussed, it is "none" even if the review is very positive or negative.
+- Generic words like "great movie" or "terrible film" count only for "overall".
+- Mentioning an actor's name or a role without any judgement is "neutral" for acting.
+- Sarcasm counts as its intended meaning ("the acting was so good I fell asleep" is negative).
+- A score such as "3/10" or "10 out of 10" is evidence for "overall".
+- "overall" is almost never "none": use "neutral" only for genuinely mixed or undecided verdicts.
+
+Answer with JSON only, using exactly these keys:
+{"acting": "...", "story": "...", "visual": "...", "sound": "...", "direction": "...", "pacing": "...", "overall": "..."}

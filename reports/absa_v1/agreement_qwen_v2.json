@@ -1,0 +1,297 @@
+{
+  "reference": "reports/absa_v1/reference/validation_300_claude.jsonl",
+  "reference_overall_vs_imdb_rating": {
+    "reviews": 300,
+    "decided_fraction": 0.95,
+    "accuracy_on_decided": 0.9929824561403509
+  },
+  "other": "data/processed/imdb_absa_v1/silver_qwen3_8b/validation.jsonl",
+  "comparison": {
+    "common_reviews": 300,
+    "per_aspect": {
+      "acting": {
+        "agreement": 0.5633333333333334,
+        "cohen_kappa": 0.42834700645836976,
+        "macro_f1": 0.5045639546232829,
+        "confusion_matrix": {
+          "labels": [
+            "positive",
+            "negative",
+            "neutral",
+            "none"
+          ],
+          "rows_reference_cols_other": [
+            [
+              85,
+              1,
+              12,
+              1
+            ],
+            [
+              2,
+              57,
+              4,
+              0
+            ],
+            [
+              11,
+              19,
+              15,
+              0
+            ],
+            [
+              2,
+              19,
+              60,
+              12
+            ]
+          ]
+        }
+      },
+      "story": {
+        "agreement": 0.71,
+        "cohen_kappa": 0.5713581868943998,
+        "macro_f1": 0.5636942351399603,
+        "confusion_matrix": {
+          "labels": [
+            "positive",
+            "negative",
+            "neutral",
+            "none"
+          ],
+          "rows_reference_cols_other": [
+            [
+              53,
+              1,
+              35,
+              2
+            ],
+            [
+              0,
+              134,
+              5,
+              0
+            ],
+            [
+              3,
+              7,
+              19,
+              1
+            ],
+            [
+              4,
+              8,
+              21,
+              7
+            ]
+          ]
+        }
+      },
+      "visual": {
+        "agreement": 0.7433333333333333,
+        "cohen_kappa": 0.5742249419397648,
+        "macro_f1": 0.6262840559109216,
+        "confusion_matrix": {
+          "labels": [
+            "positive",
+            "negative",
+            "neutral",
+            "none"
+          ],
+          "rows_reference_cols_other": [
+            [
+              39,
+              0,
+              13,
+              9
+            ],
+            [
+              0,
+              28,
+              7,
+              2
+            ],
+            [
+              3,
+              4,
+              6,
+              6
+            ],
+            [
+              5,
+              6,
+              22,
+              150
+            ]
+          ]
+        }
+      },
+      "sound": {
+        "agreement": 0.73,
+        "cohen_kappa": 0.3877551020408164,
+        "macro_f1": 0.5751454895458945,
+        "confusion_matrix": {
+          "labels": [
+            "positive",
+            "negative",
+            "neutral",
+            "none"
+          ],
+          "rows_reference_cols_other": [
+            [
+              24,
+              0,
+              4,
+              3
+            ],
+            [
+              0,
+              9,
+              3,
+              4
+            ],
+            [
+              0,
+              0,
+              0,
+              3
+            ],
+            [
+              7,
+              1,
+              56,
+              186
+            ]
+          ]
+        }
+      },
+      "direction": {
+        "agreement": 0.7066666666666667,
+        "cohen_kappa": 0.4832445975571563,
+        "macro_f1": 0.6181690565717077,
+        "confusion_matrix": {
+          "labels": [
+            "positive",
+            "negative",
+            "neutral",
+            "none"
+          ],
+          "rows_reference_cols_other": [
+            [
+              20,
+              0,
+              4,
+              5
+            ],
+            [
+              0,
+              38,
+              0,
+              3
+            ],
+            [
+              0,
+              5,
+              6,
+              10
+            ],
+            [
+              3,
+              18,
+              40,
+              148
+            ]
+          ]
+        }
+      },
+      "pacing": {
+        "agreement": 0.7133333333333334,
+        "cohen_kappa": 0.45181030086690466,
+        "macro_f1": 0.5339403287920825,
+        "confusion_matrix": {
+          "labels": [
+            "positive",
+            "negative",
+            "neutral",
+            "none"
+          ],
+          "rows_reference_cols_other": [
+            [
+              4,
+              0,
+              4,
+              3
+            ],
+            [
+              0,
+              47,
+              2,
+              5
+            ],
+            [
+              0,
+              3,
+              2,
+              0
+            ],
+            [
+              1,
+              19,
+              49,
+              161
+            ]
+          ]
+        }
+      },
+      "overall": {
+        "agreement": 0.87,
+        "cohen_kappa": 0.7711536204670814,
+        "macro_f1": 0.5176483940528884,
+        "confusion_matrix": {
+          "labels": [
+            "positive",
+            "negative",
+            "neutral",
+            "none"
+          ],
+          "rows_reference_cols_other": [
+            [
+              120,
+              3,
+              20,
+              1
+            ],
+            [
+              1,
+              136,
+              4,
+              0
+            ],
+            [
+              2,
+              8,
+              5,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        }
+      }
+    },
+    "mean": {
+      "agreement": 0.7195238095238095,
+      "cohen_kappa": 0.5239848223177848,
+      "macro_f1": 0.5627779306623911
+    }
+  },
+  "other_overall_vs_imdb_rating": {
+    "reviews": 3750,
+    "decided_fraction": 0.9013333333333333,
+    "accuracy_on_decided": 0.9724852071005917
+  }
+}

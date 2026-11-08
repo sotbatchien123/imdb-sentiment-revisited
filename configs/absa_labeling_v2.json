@@ -1,0 +1,40 @@
+{
+  "name": "absa_labeling_v2",
+  "description": "Như v1 nhưng bắt LLM trích bằng chứng trước khi ra nhãn; nhãn khác none mà bằng chứng không có trong review bị ép về none.",
+  "source_dataset": "data/processed/imdb_full_v1",
+  "output_dir": "data/processed/imdb_absa_v1/silver_qwen3_8b_v3",
+  "prompt_file": "configs/absa_prompt_v3.txt",
+  "prompt_version": "v3",
+  "aspects": [
+    "acting",
+    "story",
+    "visual",
+    "sound",
+    "direction",
+    "pacing",
+    "overall"
+  ],
+  "labels": [
+    "positive",
+    "negative",
+    "neutral",
+    "none"
+  ],
+  "server": {
+    "url": "http://127.0.0.1:8080/v1/chat/completions",
+    "model_file": "Qwen3-8B-Q4_K_M.gguf",
+    "model_source": "https://huggingface.co/Qwen/Qwen3-8B-GGUF",
+    "llama_cpp_build": "b12081"
+  },
+  "generation": {
+    "temperature": 0.0,
+    "max_tokens": 600,
+    "enable_thinking": false
+  },
+  "parallel_requests": 2,
+  "max_review_chars": 12000,
+  "evidence": true,
+  "evidence_exempt": [
+    "overall"
+  ]
+}

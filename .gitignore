@@ -43,3 +43,9 @@ GHI_NHO.md
 
 # Gói tải lên Overleaf (tạo lại được từ main.tex và figures/)
 reports/ieee_paper/overleaf_upload.zip
+
+# File kiểm tay ABSA chứa toàn văn 400 review IMDb (tạo lại bằng absa_human_check.py prepare, cùng seed)
+reports/absa_v1/human_check*/*.xlsx
+
+# Cấu hình xem trước của Claude Code trên máy (có đường dẫn cá nhân)
+.claude/launch.json

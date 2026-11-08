@@ -1,0 +1,373 @@
+{
+  "runs": [
+    {
+      "seed": 42,
+      "best_epoch": 3,
+      "best_validation": {
+        "macro_f1": 0.6837114612285952,
+        "detection_f1": 0.9072641240184928,
+        "sentiment_macro_f1": 0.6784694920727139,
+        "accuracy": 0.8374222222222221
+      },
+      "test": {
+        "mean": {
+          "macro_f1": 0.6798853728319889,
+          "detection_f1": 0.9087715899633136,
+          "sentiment_macro_f1": 0.6725895072013287,
+          "accuracy": 0.8385333333333334
+        },
+        "per_aspect": {
+          "acting": {
+            "macro_f1": 0.7202382635710545,
+            "detection_f1": 0.9430471550945565,
+            "sentiment_macro_f1": 0.6946848456003519,
+            "accuracy": 0.79896,
+            "label_counts": {
+              "positive": 8967,
+              "negative": 7286,
+              "neutral": 2313,
+              "none": 6434
+            }
+          },
+          "story": {
+            "macro_f1": 0.6608658131642382,
+            "detection_f1": 0.9408480030285823,
+            "sentiment_macro_f1": 0.6720164052713155,
+            "accuracy": 0.72976,
+            "label_counts": {
+              "positive": 5342,
+              "negative": 12207,
+              "neutral": 3846,
+              "none": 3605
+            }
+          },
+          "visual": {
+            "macro_f1": 0.6646051209729248,
+            "detection_f1": 0.8539903588644885,
+            "sentiment_macro_f1": 0.6400662904128588,
+            "accuracy": 0.83492,
+            "label_counts": {
+              "positive": 4792,
+              "negative": 2997,
+              "neutral": 1289,
+              "none": 15922
+            }
+          },
+          "sound": {
+            "macro_f1": 0.6960004020790064,
+            "detection_f1": 0.8821138211382114,
+            "sentiment_macro_f1": 0.6438452407468661,
+            "accuracy": 0.9332,
+            "label_counts": {
+              "positive": 2432,
+              "negative": 1501,
+              "neutral": 497,
+              "none": 20570
+            }
+          },
+          "direction": {
+            "macro_f1": 0.6890465674685516,
+            "detection_f1": 0.8429315045856399,
+            "sentiment_macro_f1": 0.6584182885265941,
+            "accuracy": 0.88884,
+            "label_counts": {
+              "positive": 2306,
+              "negative": 2863,
+              "neutral": 828,
+              "none": 19003
+            }
+          },
+          "overall": {
+            "macro_f1": 0.6485560697361586,
+            "detection_f1": 0.9896986970684039,
+            "sentiment_macro_f1": 0.7265059726499855,
+            "accuracy": 0.84552,
+            "label_counts": {
+              "positive": 11079,
+              "negative": 11396,
+              "neutral": 2125,
+              "none": 400
+            }
+          }
+        },
+        "examples": 25000
+      },
+      "test_length_groups": {
+        "short": {
+          "macro_f1": 0.686618584159011,
+          "detection_f1": 0.9122880617952354,
+          "sentiment_macro_f1": 0.6786202339640578,
+          "accuracy": 0.8522025493596179
+        },
+        "long": {
+          "macro_f1": 0.6161446234672673,
+          "detection_f1": 0.8994184919494458,
+          "sentiment_macro_f1": 0.6355259351755607,
+          "accuracy": 0.7414668394901707
+        }
+      },
+      "overall_vs_imdb_rating": {
+        "decided_fraction": 0.8918,
+        "accuracy_on_decided": 0.9535321821036107
+      },
+      "label_source": "silver (LLM) — chưa phải nhãn người",
+      "training_seconds": 928.030305147171,
+      "signature": "818c16f23041eba9283256866c5720151ead1c614f14eedb605e0b0ad4f46bb2"
+    },
+    {
+      "seed": 43,
+      "best_epoch": 3,
+      "best_validation": {
+        "macro_f1": 0.6759826677106772,
+        "detection_f1": 0.9075613408135128,
+        "sentiment_macro_f1": 0.6663489257938403,
+        "accuracy": 0.8355111111111112
+      },
+      "test": {
+        "mean": {
+          "macro_f1": 0.6777686537697525,
+          "detection_f1": 0.9084811725738592,
+          "sentiment_macro_f1": 0.6719480901785789,
+          "accuracy": 0.8360266666666667
+        },
+        "per_aspect": {
+          "acting": {
+            "macro_f1": 0.7212577091790044,
+            "detection_f1": 0.9428757956585605,
+            "sentiment_macro_f1": 0.7005309790844286,
+            "accuracy": 0.79392,
+            "label_counts": {
+              "positive": 8967,
+              "negative": 7286,
+              "neutral": 2313,
+              "none": 6434
+            }
+          },
+          "story": {
+            "macro_f1": 0.6588043332859046,
+            "detection_f1": 0.9423778264040846,
+            "sentiment_macro_f1": 0.6719429773206486,
+            "accuracy": 0.723,
+            "label_counts": {
+              "positive": 5342,
+              "negative": 12207,
+              "neutral": 3846,
+              "none": 3605
+            }
+          },
+          "visual": {
+            "macro_f1": 0.6698267209083886,
+            "detection_f1": 0.8557629693943998,
+            "sentiment_macro_f1": 0.6412868379092639,
+            "accuracy": 0.83712,
+            "label_counts": {
+              "positive": 4792,
+              "negative": 2997,
+              "neutral": 1289,
+              "none": 15922
+            }
+          },
+          "sound": {
+            "macro_f1": 0.6829795001874619,
+            "detection_f1": 0.879758847828514,
+            "sentiment_macro_f1": 0.6304327135221862,
+            "accuracy": 0.93008,
+            "label_counts": {
+              "positive": 2432,
+              "negative": 1501,
+              "neutral": 497,
+              "none": 20570
+            }
+          },
+          "direction": {
+            "macro_f1": 0.6922794396078894,
+            "detection_f1": 0.8411740388590326,
+            "sentiment_macro_f1": 0.6642475719237514,
+            "accuracy": 0.88764,
+            "label_counts": {
+              "positive": 2306,
+              "negative": 2863,
+              "neutral": 828,
+              "none": 19003
+            }
+          },
+          "overall": {
+            "macro_f1": 0.6414642194498663,
+            "detection_f1": 0.9889375572985637,
+            "sentiment_macro_f1": 0.7232474613111951,
+            "accuracy": 0.8444,
+            "label_counts": {
+              "positive": 11079,
+              "negative": 11396,
+              "neutral": 2125,
+              "none": 400
+            }
+          }
+        },
+        "examples": 25000
+      },
+      "test_length_groups": {
+        "short": {
+          "macro_f1": 0.684276312024819,
+          "detection_f1": 0.9115109062816362,
+          "sentiment_macro_f1": 0.6772697506538989,
+          "accuracy": 0.8497535821849046
+        },
+        "long": {
+          "macro_f1": 0.6120970020003483,
+          "detection_f1": 0.9009305404848765,
+          "sentiment_macro_f1": 0.635188944461222,
+          "accuracy": 0.738550442860229
+        }
+      },
+      "overall_vs_imdb_rating": {
+        "decided_fraction": 0.89344,
+        "accuracy_on_decided": 0.9525877507163324
+      },
+      "label_source": "silver (LLM) — chưa phải nhãn người",
+      "training_seconds": 928.8311395645142,
+      "signature": "818c16f23041eba9283256866c5720151ead1c614f14eedb605e0b0ad4f46bb2"
+    },
+    {
+      "seed": 44,
+      "best_epoch": 3,
+      "best_validation": {
+        "macro_f1": 0.6809388113792126,
+        "detection_f1": 0.9069411200561132,
+        "sentiment_macro_f1": 0.6663347745829357,
+        "accuracy": 0.8404888888888888
+      },
+      "test": {
+        "mean": {
+          "macro_f1": 0.6782841667364562,
+          "detection_f1": 0.9074952695439524,
+          "sentiment_macro_f1": 0.6681561184807531,
+          "accuracy": 0.83858
+        },
+        "per_aspect": {
+          "acting": {
+            "macro_f1": 0.7192332690755457,
+            "detection_f1": 0.9392846325412342,
+            "sentiment_macro_f1": 0.695007929864325,
+            "accuracy": 0.793,
+            "label_counts": {
+              "positive": 8967,
+              "negative": 7286,
+              "neutral": 2313,
+              "none": 6434
+            }
+          },
+          "story": {
+            "macro_f1": 0.6546229614097098,
+            "detection_f1": 0.9385270267056669,
+            "sentiment_macro_f1": 0.6634492146497614,
+            "accuracy": 0.72264,
+            "label_counts": {
+              "positive": 5342,
+              "negative": 12207,
+              "neutral": 3846,
+              "none": 3605
+            }
+          },
+          "visual": {
+            "macro_f1": 0.6648341957411239,
+            "detection_f1": 0.8571585118623637,
+            "sentiment_macro_f1": 0.6291043374311186,
+            "accuracy": 0.84188,
+            "label_counts": {
+              "positive": 4792,
+              "negative": 2997,
+              "neutral": 1289,
+              "none": 15922
+            }
+          },
+          "sound": {
+            "macro_f1": 0.6927010482747006,
+            "detection_f1": 0.8799728752260397,
+            "sentiment_macro_f1": 0.6395360222912108,
+            "accuracy": 0.93316,
+            "label_counts": {
+              "positive": 2432,
+              "negative": 1501,
+              "neutral": 497,
+              "none": 20570
+            }
+          },
+          "direction": {
+            "macro_f1": 0.6889702757806029,
+            "detection_f1": 0.8404344193817878,
+            "sentiment_macro_f1": 0.6551934021683291,
+            "accuracy": 0.89072,
+            "label_counts": {
+              "positive": 2306,
+              "negative": 2863,
+              "neutral": 828,
+              "none": 19003
+            }
+          },
+          "overall": {
+            "macro_f1": 0.6493432501370539,
+            "detection_f1": 0.9895941515466227,
+            "sentiment_macro_f1": 0.7266458044797738,
+            "accuracy": 0.85008,
+            "label_counts": {
+              "positive": 11079,
+              "negative": 11396,
+              "neutral": 2125,
+              "none": 400
+            }
+          }
+        },
+        "examples": 25000
+      },
+      "test_length_groups": {
+        "short": {
+          "macro_f1": 0.6856510324374788,
+          "detection_f1": 0.91101492780567,
+          "sentiment_macro_f1": 0.6743300377824338,
+          "accuracy": 0.8525600073012686
+        },
+        "long": {
+          "macro_f1": 0.6091867217041989,
+          "detection_f1": 0.8984730232616712,
+          "sentiment_macro_f1": 0.6281727258453387,
+          "accuracy": 0.7393065456902139
+        }
+      },
+      "overall_vs_imdb_rating": {
+        "decided_fraction": 0.90308,
+        "accuracy_on_decided": 0.9501262346635957
+      },
+      "label_source": "silver (LLM) — chưa phải nhãn người",
+      "training_seconds": 933.1171202659607,
+      "signature": "818c16f23041eba9283256866c5720151ead1c614f14eedb605e0b0ad4f46bb2"
+    }
+  ],
+  "aggregate": {
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "macro_f1": {
+      "mean": 0.6786460644460659,
+      "sample_std": 0.0011037899987200045
+    },
+    "detection_f1": {
+      "mean": 0.9082493440270417,
+      "sample_std": 0.000668996868123615
+    },
+    "sentiment_macro_f1": {
+      "mean": 0.6708979052868869,
+      "sample_std": 0.0023960175535637186
+    },
+    "per_aspect_macro_f1": {
+      "acting": 0.7202430806085349,
+      "story": 0.6580977026199508,
+      "visual": 0.6664220125408125,
+      "sound": 0.6905603168470563,
+      "direction": 0.690098760952348,
+      "overall": 0.646454513107693
+    }
+  }
+}

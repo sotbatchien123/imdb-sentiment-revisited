@@ -1,0 +1,1603 @@
+{
+  "test_reviews": 25000,
+  "aspects": [
+    "acting",
+    "story",
+    "visual",
+    "sound",
+    "direction",
+    "overall"
+  ],
+  "labels": [
+    "positive",
+    "negative",
+    "neutral",
+    "none"
+  ],
+  "label_source": "silver (Qwen3-8B, prompt v3) — chưa phải nhãn người",
+  "silver_distribution": {
+    "acting": {
+      "positive": 8967,
+      "negative": 7286,
+      "neutral": 2313,
+      "none": 6434
+    },
+    "story": {
+      "positive": 5342,
+      "negative": 12207,
+      "neutral": 3846,
+      "none": 3605
+    },
+    "visual": {
+      "positive": 4792,
+      "negative": 2997,
+      "neutral": 1289,
+      "none": 15922
+    },
+    "sound": {
+      "positive": 2432,
+      "negative": 1501,
+      "neutral": 497,
+      "none": 20570
+    },
+    "direction": {
+      "positive": 2306,
+      "negative": 2863,
+      "neutral": 828,
+      "none": 19003
+    },
+    "overall": {
+      "positive": 11079,
+      "negative": 11396,
+      "neutral": 2125,
+      "none": 400
+    }
+  },
+  "systems": {
+    "roberta_large": {
+      "title": "RoBERTa-large",
+      "per_aspect": {
+        "acting": {
+          "class_f1": {
+            "positive": 0.8803185493070552,
+            "negative": 0.8536887921742625,
+            "neutral": 0.5019521011398543,
+            "none": 0.86647442278275
+          },
+          "confusion_sum_3_seeds": [
+            [
+              23515,
+              882,
+              1418,
+              1086
+            ],
+            [
+              1078,
+              18425,
+              1151,
+              1204
+            ],
+            [
+              1437,
+              1185,
+              3465,
+              852
+            ],
+            [
+              493,
+              816,
+              837,
+              17156
+            ]
+          ],
+          "top_errors": [
+            {
+              "silver": "neutral",
+              "prediction": "positive",
+              "count_per_seed": 479.0,
+              "share_of_errors": 0.1155237559289332
+            },
+            {
+              "silver": "positive",
+              "prediction": "neutral",
+              "count_per_seed": 472.6666666666667,
+              "share_of_errors": 0.11399630195353325
+            },
+            {
+              "silver": "negative",
+              "prediction": "none",
+              "count_per_seed": 401.3333333333333,
+              "share_of_errors": 0.0967923466516601
+            },
+            {
+              "silver": "neutral",
+              "prediction": "negative",
+              "count_per_seed": 395.0,
+              "share_of_errors": 0.09526489267626015
+            }
+          ]
+        },
+        "story": {
+          "class_f1": {
+            "positive": 0.749812430606513,
+            "negative": 0.8768040633620444,
+            "neutral": 0.5078350459808387,
+            "none": 0.730494327293349
+          },
+          "confusion_sum_3_seeds": [
+            [
+              12357,
+              535,
+              2119,
+              1015
+            ],
+            [
+              1004,
+              31452,
+              2261,
+              1904
+            ],
+            [
+              2773,
+              2210,
+              5644,
+              911
+            ],
+            [
+              799,
+              924,
+              665,
+              8427
+            ]
+          ],
+          "top_errors": [
+            {
+              "silver": "neutral",
+              "prediction": "positive",
+              "count_per_seed": 924.3333333333334,
+              "share_of_errors": 0.16197429906542057
+            },
+            {
+              "silver": "negative",
+              "prediction": "neutral",
+              "count_per_seed": 753.6666666666666,
+              "share_of_errors": 0.13206775700934578
+            },
+            {
+              "silver": "neutral",
+              "prediction": "negative",
+              "count_per_seed": 736.6666666666666,
+              "share_of_errors": 0.12908878504672897
+            },
+            {
+              "silver": "positive",
+              "prediction": "neutral",
+              "count_per_seed": 706.3333333333334,
+              "share_of_errors": 0.12377336448598131
+            }
+          ]
+        },
+        "visual": {
+          "class_f1": {
+            "positive": 0.8420764546369172,
+            "negative": 0.7720386233198067,
+            "neutral": 0.3877892444474334,
+            "none": 0.9284395767324978
+          },
+          "confusion_sum_3_seeds": [
+            [
+              12456,
+              260,
+              741,
+              919
+            ],
+            [
+              272,
+              7395,
+              583,
+              741
+            ],
+            [
+              952,
+              706,
+              1486,
+              723
+            ],
+            [
+              1528,
+              1806,
+              981,
+              43451
+            ]
+          ],
+          "top_errors": [
+            {
+              "silver": "none",
+              "prediction": "negative",
+              "count_per_seed": 602.0,
+              "share_of_errors": 0.17685076380728554
+            },
+            {
+              "silver": "none",
+              "prediction": "positive",
+              "count_per_seed": 509.3333333333333,
+              "share_of_errors": 0.14962788875832353
+            },
+            {
+              "silver": "none",
+              "prediction": "neutral",
+              "count_per_seed": 327.0,
+              "share_of_errors": 0.09606345475910694
+            },
+            {
+              "silver": "neutral",
+              "prediction": "positive",
+              "count_per_seed": 317.3333333333333,
+              "share_of_errors": 0.09322365844104974
+            }
+          ]
+        },
+        "sound": {
+          "class_f1": {
+            "positive": 0.8705469818699555,
+            "negative": 0.7975550544047781,
+            "neutral": 0.3545239854199149,
+            "none": 0.9759760930760986
+          },
+          "confusion_sum_3_seeds": [
+            [
+              6402,
+              65,
+              322,
+              507
+            ],
+            [
+              129,
+              3713,
+              207,
+              454
+            ],
+            [
+              360,
+              281,
+              521,
+              329
+            ],
+            [
+              521,
+              749,
+              396,
+              60044
+            ]
+          ],
+          "top_errors": [
+            {
+              "silver": "none",
+              "prediction": "negative",
+              "count_per_seed": 249.66666666666666,
+              "share_of_errors": 0.17337962962962963
+            },
+            {
+              "silver": "none",
+              "prediction": "positive",
+              "count_per_seed": 173.66666666666666,
+              "share_of_errors": 0.12060185185185185
+            },
+            {
+              "silver": "positive",
+              "prediction": "none",
+              "count_per_seed": 169.0,
+              "share_of_errors": 0.11736111111111111
+            },
+            {
+              "silver": "negative",
+              "prediction": "none",
+              "count_per_seed": 151.33333333333334,
+              "share_of_errors": 0.1050925925925926
+            }
+          ]
+        },
+        "direction": {
+          "class_f1": {
+            "positive": 0.7951630177134416,
+            "negative": 0.8221901090960416,
+            "neutral": 0.411298351794076,
+            "none": 0.9536108078225456
+          },
+          "confusion_sum_3_seeds": [
+            [
+              5826,
+              51,
+              400,
+              641
+            ],
+            [
+              94,
+              7137,
+              400,
+              958
+            ],
+            [
+              635,
+              391,
+              1077,
+              381
+            ],
+            [
+              1181,
+              1193,
+              876,
+              53759
+            ]
+          ],
+          "top_errors": [
+            {
+              "silver": "none",
+              "prediction": "negative",
+              "count_per_seed": 397.6666666666667,
+              "share_of_errors": 0.1656714345229829
+            },
+            {
+              "silver": "none",
+              "prediction": "positive",
+              "count_per_seed": 393.6666666666667,
+              "share_of_errors": 0.164004999305652
+            },
+            {
+              "silver": "negative",
+              "prediction": "none",
+              "count_per_seed": 319.3333333333333,
+              "share_of_errors": 0.13303707818358562
+            },
+            {
+              "silver": "none",
+              "prediction": "neutral",
+              "count_per_seed": 292.0,
+              "share_of_errors": 0.12164977086515762
+            }
+          ]
+        },
+        "overall": {
+          "class_f1": {
+            "positive": 0.9348031532501233,
+            "negative": 0.9415067973045756,
+            "neutral": 0.5352323757164915,
+            "none": 0.5153858912063868
+          },
+          "confusion_sum_3_seeds": [
+            [
+              31000,
+              357,
+              1544,
+              336
+            ],
+            [
+              484,
+              31865,
+              1632,
+              207
+            ],
+            [
+              1366,
+              1156,
+              3537,
+              316
+            ],
+            [
+              237,
+              123,
+              125,
+              715
+            ]
+          ],
+          "top_errors": [
+            {
+              "silver": "negative",
+              "prediction": "neutral",
+              "count_per_seed": 544.0,
+              "share_of_errors": 0.20702778130153496
+            },
+            {
+              "silver": "positive",
+              "prediction": "neutral",
+              "count_per_seed": 514.6666666666666,
+              "share_of_errors": 0.19586451858429532
+            },
+            {
+              "silver": "neutral",
+              "prediction": "positive",
+              "count_per_seed": 455.3333333333333,
+              "share_of_errors": 0.17328428263351517
+            },
+            {
+              "silver": "neutral",
+              "prediction": "negative",
+              "count_per_seed": 385.3333333333333,
+              "share_of_errors": 0.14664467842192058
+            }
+          ]
+        }
+      },
+      "length_groups": {
+        "short": {
+          "macro_f1": 0.7513353255425955,
+          "detection_f1": 0.9246350179076582,
+          "sentiment_macro_f1": 0.7593139940241183,
+          "accuracy": 0.8807771733655686
+        },
+        "long": {
+          "macro_f1": 0.667547301397736,
+          "detection_f1": 0.90955928771278,
+          "sentiment_macro_f1": 0.704107633769313,
+          "accuracy": 0.7763794406651549
+        }
+      },
+      "overall_vs_imdb_rating": {
+        "decided_fraction": 0.8878400000000001,
+        "accuracy_on_decided": 0.975342787267353
+      }
+    },
+    "bert_base": {
+      "title": "BERT-base",
+      "per_aspect": {
+        "acting": {
+          "class_f1": {
+            "positive": 0.8423993790945703,
+            "negative": 0.8101141119207629,
+            "neutral": 0.3865847850385069,
+            "none": 0.8418740463802997
+          },
+          "confusion_sum_3_seeds": [
+            [
+              22800,
+              1443,
+              1290,
+              1368
+            ],
+            [
+              1681,
+              17449,
+              1092,
+              1636
+            ],
+            [
+              1995,
+              1466,
+              2400,
+              1078
+            ],
+            [
+              753,
+              862,
+              689,
+              16998
+            ]
+          ],
+          "top_errors": [
+            {
+              "silver": "neutral",
+              "prediction": "positive",
+              "count_per_seed": 665.0,
+              "share_of_errors": 0.12994203087344494
+            },
+            {
+              "silver": "negative",
+              "prediction": "positive",
+              "count_per_seed": 560.3333333333334,
+              "share_of_errors": 0.1094900019540155
+            },
+            {
+              "silver": "negative",
+              "prediction": "none",
+              "count_per_seed": 545.3333333333334,
+              "share_of_errors": 0.10655897870123103
+            },
+            {
+              "silver": "neutral",
+              "prediction": "negative",
+              "count_per_seed": 488.6666666666667,
+              "share_of_errors": 0.09548622419071191
+            }
+          ]
+        },
+        "story": {
+          "class_f1": {
+            "positive": 0.6947711173185341,
+            "negative": 0.8452229109883987,
+            "neutral": 0.417376595875365,
+            "none": 0.6750201862975054
+          },
+          "confusion_sum_3_seeds": [
+            [
+              11854,
+              953,
+              1928,
+              1291
+            ],
+            [
+              1757,
+              30343,
+              2407,
+              2114
+            ],
+            [
+              3538,
+              2498,
+              4363,
+              1139
+            ],
+            [
+              948,
+              1382,
+              660,
+              7825
+            ]
+          ],
+          "top_errors": [
+            {
+              "silver": "neutral",
+              "prediction": "positive",
+              "count_per_seed": 1179.3333333333333,
+              "share_of_errors": 0.17162260489934514
+            },
+            {
+              "silver": "neutral",
+              "prediction": "negative",
+              "count_per_seed": 832.6666666666666,
+              "share_of_errors": 0.12117390249818094
+            },
+            {
+              "silver": "negative",
+              "prediction": "neutral",
+              "count_per_seed": 802.3333333333334,
+              "share_of_errors": 0.11675964103807907
+            },
+            {
+              "silver": "negative",
+              "prediction": "none",
+              "count_per_seed": 704.6666666666666,
+              "share_of_errors": 0.10254668930390493
+            }
+          ]
+        },
+        "visual": {
+          "class_f1": {
+            "positive": 0.7973899465200267,
+            "negative": 0.7174003253134161,
+            "neutral": 0.23533464507303595,
+            "none": 0.9155631332567707
+          },
+          "confusion_sum_3_seeds": [
+            [
+              11811,
+              517,
+              535,
+              1513
+            ],
+            [
+              467,
+              6962,
+              497,
+              1065
+            ],
+            [
+              1171,
+              974,
+              745,
+              977
+            ],
+            [
+              1799,
+              1966,
+              671,
+              43330
+            ]
+          ],
+          "top_errors": [
+            {
+              "silver": "none",
+              "prediction": "negative",
+              "count_per_seed": 655.3333333333334,
+              "share_of_errors": 0.1617840684660961
+            },
+            {
+              "silver": "none",
+              "prediction": "positive",
+              "count_per_seed": 599.6666666666666,
+              "share_of_errors": 0.1480414746543779
+            },
+            {
+              "silver": "positive",
+              "prediction": "none",
+              "count_per_seed": 504.3333333333333,
+              "share_of_errors": 0.12450625411454905
+            },
+            {
+              "silver": "neutral",
+              "prediction": "positive",
+              "count_per_seed": 390.3333333333333,
+              "share_of_errors": 0.09636273864384463
+            }
+          ]
+        },
+        "sound": {
+          "class_f1": {
+            "positive": 0.8259857568615305,
+            "negative": 0.7296446058651104,
+            "neutral": 0.23241818205997275,
+            "none": 0.9741927226016114
+          },
+          "confusion_sum_3_seeds": [
+            [
+              6161,
+              310,
+              246,
+              579
+            ],
+            [
+              323,
+              3386,
+              188,
+              606
+            ],
+            [
+              475,
+              364,
+              286,
+              366
+            ],
+            [
+              663,
+              720,
+              249,
+              60078
+            ]
+          ],
+          "top_errors": [
+            {
+              "silver": "none",
+              "prediction": "negative",
+              "count_per_seed": 240.0,
+              "share_of_errors": 0.14148162703871095
+            },
+            {
+              "silver": "none",
+              "prediction": "positive",
+              "count_per_seed": 221.0,
+              "share_of_errors": 0.13028099823147965
+            },
+            {
+              "silver": "negative",
+              "prediction": "none",
+              "count_per_seed": 202.0,
+              "share_of_errors": 0.11908036942424838
+            },
+            {
+              "silver": "positive",
+              "prediction": "none",
+              "count_per_seed": 193.0,
+              "share_of_errors": 0.11377480841029672
+            }
+          ]
+        },
+        "direction": {
+          "class_f1": {
+            "positive": 0.7451295048667298,
+            "negative": 0.77096201210214,
+            "neutral": 0.2946585667190443,
+            "none": 0.9496449601214776
+          },
+          "confusion_sum_3_seeds": [
+            [
+              5349,
+              163,
+              448,
+              958
+            ],
+            [
+              238,
+              6582,
+              468,
+              1301
+            ],
+            [
+              745,
+              526,
+              699,
+              514
+            ],
+            [
+              1107,
+              1215,
+              637,
+              54050
+            ]
+          ],
+          "top_errors": [
+            {
+              "silver": "negative",
+              "prediction": "none",
+              "count_per_seed": 433.6666666666667,
+              "share_of_errors": 0.1563701923076923
+            },
+            {
+              "silver": "none",
+              "prediction": "negative",
+              "count_per_seed": 405.0,
+              "share_of_errors": 0.14603365384615385
+            },
+            {
+              "silver": "none",
+              "prediction": "positive",
+              "count_per_seed": 369.0,
+              "share_of_errors": 0.13305288461538461
+            },
+            {
+              "silver": "positive",
+              "prediction": "none",
+              "count_per_seed": 319.3333333333333,
+              "share_of_errors": 0.11514423076923076
+            }
+          ]
+        },
+        "overall": {
+          "class_f1": {
+            "positive": 0.8980158511975552,
+            "negative": 0.9030297807158302,
+            "neutral": 0.3649961093173424,
+            "none": 0.41977631120004405
+          },
+          "confusion_sum_3_seeds": [
+            [
+              29938,
+              1096,
+              1810,
+              393
+            ],
+            [
+              1187,
+              30684,
+              2065,
+              252
+            ],
+            [
+              1971,
+              1811,
+              2314,
+              279
+            ],
+            [
+              342,
+              179,
+              115,
+              564
+            ]
+          ],
+          "top_errors": [
+            {
+              "silver": "negative",
+              "prediction": "neutral",
+              "count_per_seed": 688.3333333333334,
+              "share_of_errors": 0.17956521739130435
+            },
+            {
+              "silver": "neutral",
+              "prediction": "positive",
+              "count_per_seed": 657.0,
+              "share_of_errors": 0.1713913043478261
+            },
+            {
+              "silver": "neutral",
+              "prediction": "negative",
+              "count_per_seed": 603.6666666666666,
+              "share_of_errors": 0.1574782608695652
+            },
+            {
+              "silver": "positive",
+              "prediction": "neutral",
+              "count_per_seed": 603.3333333333334,
+              "share_of_errors": 0.15739130434782608
+            }
+          ]
+        }
+      },
+      "length_groups": {
+        "short": {
+          "macro_f1": 0.6855153095404364,
+          "detection_f1": 0.9116046319608472,
+          "sentiment_macro_f1": 0.676740007466797,
+          "accuracy": 0.8515053796152636
+        },
+        "long": {
+          "macro_f1": 0.6124761157239381,
+          "detection_f1": 0.8996073518986645,
+          "sentiment_macro_f1": 0.6329625351607071,
+          "accuracy": 0.7397746093468712
+        }
+      },
+      "overall_vs_imdb_rating": {
+        "decided_fraction": 0.8961066666666667,
+        "accuracy_on_decided": 0.9520820558278462
+      }
+    },
+    "bilstm": {
+      "title": "BERT frozen + BiLSTM",
+      "per_aspect": {
+        "acting": {
+          "class_f1": {
+            "positive": 0.8027320657908549,
+            "negative": 0.7562502243457709,
+            "neutral": 0.30487569471099224,
+            "none": 0.8214600817666251
+          },
+          "confusion_sum_3_seeds": [
+            [
+              21250,
+              2323,
+              1707,
+              1621
+            ],
+            [
+              1978,
+              16393,
+              1506,
+              1981
+            ],
+            [
+              1973,
+              1853,
+              1969,
+              1144
+            ],
+            [
+              842,
+              926,
+              772,
+              16762
+            ]
+          ],
+          "top_errors": [
+            {
+              "silver": "positive",
+              "prediction": "negative",
+              "count_per_seed": 774.3333333333334,
+              "share_of_errors": 0.12471813593900999
+            },
+            {
+              "silver": "negative",
+              "prediction": "none",
+              "count_per_seed": 660.3333333333334,
+              "share_of_errors": 0.10635670568023194
+            },
+            {
+              "silver": "negative",
+              "prediction": "positive",
+              "count_per_seed": 659.3333333333334,
+              "share_of_errors": 0.10619564050252335
+            },
+            {
+              "silver": "neutral",
+              "prediction": "positive",
+              "count_per_seed": 657.6666666666666,
+              "share_of_errors": 0.10592719853967572
+            }
+          ]
+        },
+        "story": {
+          "class_f1": {
+            "positive": 0.6208405870760141,
+            "negative": 0.8248504942097807,
+            "neutral": 0.3753090071523186,
+            "none": 0.6078371613225242
+          },
+          "confusion_sum_3_seeds": [
+            [
+              10504,
+              1211,
+              2637,
+              1674
+            ],
+            [
+              2026,
+              29545,
+              2652,
+              2398
+            ],
+            [
+              3788,
+              2627,
+              4055,
+              1068
+            ],
+            [
+              1490,
+              1633,
+              724,
+              6968
+            ]
+          ],
+          "top_errors": [
+            {
+              "silver": "neutral",
+              "prediction": "positive",
+              "count_per_seed": 1262.6666666666667,
+              "share_of_errors": 0.1583082581076563
+            },
+            {
+              "silver": "negative",
+              "prediction": "neutral",
+              "count_per_seed": 884.0,
+              "share_of_errors": 0.11083249749247744
+            },
+            {
+              "silver": "positive",
+              "prediction": "neutral",
+              "count_per_seed": 879.0,
+              "share_of_errors": 0.11020561685055165
+            },
+            {
+              "silver": "neutral",
+              "prediction": "negative",
+              "count_per_seed": 875.6666666666666,
+              "share_of_errors": 0.10978769642260114
+            }
+          ]
+        },
+        "visual": {
+          "class_f1": {
+            "positive": 0.7278954807454882,
+            "negative": 0.6353059520854015,
+            "neutral": 0.17749504618611156,
+            "none": 0.8890394062179746
+          },
+          "confusion_sum_3_seeds": [
+            [
+              10769,
+              946,
+              653,
+              2008
+            ],
+            [
+              679,
+              6406,
+              580,
+              1326
+            ],
+            [
+              1176,
+              1121,
+              574,
+              996
+            ],
+            [
+              2588,
+              2702,
+              787,
+              41689
+            ]
+          ],
+          "top_errors": [
+            {
+              "silver": "none",
+              "prediction": "negative",
+              "count_per_seed": 900.6666666666666,
+              "share_of_errors": 0.1736280683716746
+            },
+            {
+              "silver": "none",
+              "prediction": "positive",
+              "count_per_seed": 862.6666666666666,
+              "share_of_errors": 0.16630253180825086
+            },
+            {
+              "silver": "positive",
+              "prediction": "none",
+              "count_per_seed": 669.3333333333334,
+              "share_of_errors": 0.12903225806451613
+            },
+            {
+              "silver": "negative",
+              "prediction": "none",
+              "count_per_seed": 442.0,
+              "share_of_errors": 0.085207556869297
+            }
+          ]
+        },
+        "sound": {
+          "class_f1": {
+            "positive": 0.7738258867835865,
+            "negative": 0.6463444497060931,
+            "neutral": 0.18507721387948306,
+            "none": 0.9668321943507042
+          },
+          "confusion_sum_3_seeds": [
+            [
+              5835,
+              421,
+              403,
+              637
+            ],
+            [
+              433,
+              3025,
+              313,
+              732
+            ],
+            [
+              497,
+              391,
+              260,
+              343
+            ],
+            [
+              1019,
+              1020,
+              321,
+              59350
+            ]
+          ],
+          "top_errors": [
+            {
+              "silver": "none",
+              "prediction": "negative",
+              "count_per_seed": 340.0,
+              "share_of_errors": 0.1562021439509954
+            },
+            {
+              "silver": "none",
+              "prediction": "positive",
+              "count_per_seed": 339.6666666666667,
+              "share_of_errors": 0.1560490045941807
+            },
+            {
+              "silver": "negative",
+              "prediction": "none",
+              "count_per_seed": 244.0,
+              "share_of_errors": 0.11209800918836141
+            },
+            {
+              "silver": "positive",
+              "prediction": "none",
+              "count_per_seed": 212.33333333333334,
+              "share_of_errors": 0.09754977029096477
+            }
+          ]
+        },
+        "direction": {
+          "class_f1": {
+            "positive": 0.6358299090655454,
+            "negative": 0.6595986135455411,
+            "neutral": 0.23147292577620107,
+            "none": 0.9139635764668324
+          },
+          "confusion_sum_3_seeds": [
+            [
+              4871,
+              235,
+              514,
+              1298
+            ],
+            [
+              298,
+              5881,
+              559,
+              1851
+            ],
+            [
+              814,
+              555,
+              590,
+              525
+            ],
+            [
+              2427,
+              2588,
+              919,
+              51075
+            ]
+          ],
+          "top_errors": [
+            {
+              "silver": "none",
+              "prediction": "negative",
+              "count_per_seed": 862.6666666666666,
+              "share_of_errors": 0.20567432249860923
+            },
+            {
+              "silver": "none",
+              "prediction": "positive",
+              "count_per_seed": 809.0,
+              "share_of_errors": 0.19287928157037273
+            },
+            {
+              "silver": "negative",
+              "prediction": "none",
+              "count_per_seed": 617.0,
+              "share_of_errors": 0.14710323452276883
+            },
+            {
+              "silver": "positive",
+              "prediction": "none",
+              "count_per_seed": 432.6666666666667,
+              "share_of_errors": 0.10315505046491298
+            }
+          ]
+        },
+        "overall": {
+          "class_f1": {
+            "positive": 0.8768865641026199,
+            "negative": 0.8880434259374931,
+            "neutral": 0.332382537483439,
+            "none": 0.36576188783670566
+          },
+          "confusion_sum_3_seeds": [
+            [
+              28904,
+              1242,
+              2372,
+              719
+            ],
+            [
+              1356,
+              29698,
+              2726,
+              408
+            ],
+            [
+              2097,
+              1622,
+              2316,
+              340
+            ],
+            [
+              328,
+              130,
+              145,
+              597
+            ]
+          ],
+          "top_errors": [
+            {
+              "silver": "negative",
+              "prediction": "neutral",
+              "count_per_seed": 908.6666666666666,
+              "share_of_errors": 0.2021505376344086
+            },
+            {
+              "silver": "positive",
+              "prediction": "neutral",
+              "count_per_seed": 790.6666666666666,
+              "share_of_errors": 0.17589914720059324
+            },
+            {
+              "silver": "neutral",
+              "prediction": "positive",
+              "count_per_seed": 699.0,
+              "share_of_errors": 0.15550611790878754
+            },
+            {
+              "silver": "neutral",
+              "prediction": "negative",
+              "count_per_seed": 540.6666666666666,
+              "share_of_errors": 0.12028179458657767
+            }
+          ]
+        }
+      },
+      "length_groups": {
+        "short": {
+          "macro_f1": 0.6302821539888855,
+          "detection_f1": 0.875913061642487,
+          "sentiment_macro_f1": 0.6260867454759342,
+          "accuracy": 0.8126185188565401
+        },
+        "long": {
+          "macro_f1": 0.5717630279403567,
+          "detection_f1": 0.8857671685995313,
+          "sentiment_macro_f1": 0.5946344410712755,
+          "accuracy": 0.6975408655577158
+        }
+      },
+      "overall_vs_imdb_rating": {
+        "decided_fraction": 0.8716933333333333,
+        "accuracy_on_decided": 0.945982835563811
+      }
+    }
+  },
+  "roberta_overall_by_star_rating": {
+    "1": {
+      "reviews": 5022,
+      "positive": 0.01440329218106996,
+      "negative": 0.9553962564715253,
+      "neutral": 0.02130625248904819,
+      "none": 0.008894198858356564,
+      "silver": {
+        "positive": 0.014735165272799682,
+        "negative": 0.9549980087614496,
+        "neutral": 0.024691358024691357,
+        "none": 0.005575467941059339
+      }
+    },
+    "2": {
+      "reviews": 2302,
+      "positive": 0.018824210831161307,
+      "negative": 0.9223863307269041,
+      "neutral": 0.047929336808572254,
+      "none": 0.010860121633362294,
+      "silver": {
+        "positive": 0.019113814074717638,
+        "negative": 0.9209383145091226,
+        "neutral": 0.053431798436142486,
+        "none": 0.006516072980017376
+      }
+    },
+    "3": {
+      "reviews": 2541,
+      "positive": 0.02295684113865932,
+      "negative": 0.8458612094975732,
+      "neutral": 0.11767020857929948,
+      "none": 0.013511740784468058,
+      "silver": {
+        "positive": 0.02715466351829988,
+        "negative": 0.8563557654466746,
+        "neutral": 0.10743801652892562,
+        "none": 0.00905155450609996
+      }
+    },
+    "4": {
+      "reviews": 2635,
+      "positive": 0.04996837444655281,
+      "negative": 0.7038583175205566,
+      "neutral": 0.2306135357368754,
+      "none": 0.01555977229601518,
+      "silver": {
+        "positive": 0.06527514231499051,
+        "negative": 0.7229601518026565,
+        "neutral": 0.196584440227704,
+        "none": 0.015180265654648957
+      }
+    },
+    "7": {
+      "reviews": 2307,
+      "positive": 0.7006212975003612,
+      "negative": 0.043779800606848725,
+      "neutral": 0.22626788036410922,
+      "none": 0.029331021528680827,
+      "silver": {
+        "positive": 0.7182488079757261,
+        "negative": 0.06718682271348071,
+        "neutral": 0.19029042045947117,
+        "none": 0.024273948851322065
+      }
+    },
+    "8": {
+      "reviews": 2850,
+      "positive": 0.8456140350877193,
+      "negative": 0.020233918128654972,
+      "neutral": 0.10701754385964912,
+      "none": 0.02713450292397661,
+      "silver": {
+        "positive": 0.8442105263157895,
+        "negative": 0.030175438596491227,
+        "neutral": 0.10105263157894737,
+        "none": 0.02456140350877193
+      }
+    },
+    "9": {
+      "reviews": 2344,
+      "positive": 0.89419795221843,
+      "negative": 0.009954493742889647,
+      "neutral": 0.06470420932878271,
+      "none": 0.03114334470989761,
+      "silver": {
+        "positive": 0.8890784982935154,
+        "negative": 0.023464163822525596,
+        "neutral": 0.06527303754266212,
+        "none": 0.02218430034129693
+      }
+    },
+    "10": {
+      "reviews": 4999,
+      "positive": 0.920384076815363,
+      "negative": 0.011935720477428819,
+      "neutral": 0.03534040141361606,
+      "none": 0.032339801293592055,
+      "silver": {
+        "positive": 0.9147829565913183,
+        "negative": 0.020604120824164834,
+        "neutral": 0.041408281656331265,
+        "none": 0.023204640928185638
+      }
+    }
+  },
+  "hard_cases": {
+    "acting": {
+      "all_9_runs_wrong": 1782,
+      "all_9_runs_wrong_and_agree": 1079,
+      "share_of_reviews": 0.04316,
+      "top_pairs": [
+        {
+          "silver": "neutral",
+          "models": "positive",
+          "count": 163
+        },
+        {
+          "silver": "negative",
+          "models": "none",
+          "count": 155
+        },
+        {
+          "silver": "positive",
+          "models": "none",
+          "count": 136
+        }
+      ],
+      "examples": [
+        {
+          "review_id": "test/neg/9954_4",
+          "rating": 4,
+          "silver": "positive",
+          "all_models_predict": "negative",
+          "llm_evidence": "Zucco and Strange's presence, along with the cute Anne Nagel",
+          "snippet": "… consisting only of a beard and dimestore fangs for the most part. If it were not for Zucco and Strange's presence, along with the cute Anne Nagel, this would be completely unwatchable. Strange, who would go on to play Frankenstein's monster for Unuiversal in …"
+        },
+        {
+          "review_id": "test/neg/5146_3",
+          "rating": 3,
+          "silver": "positive",
+          "all_models_predict": "negative",
+          "llm_evidence": "the seemingly effortless performance of Lynda Bellingham hitting all the right comedy marks",
+          "snippet": "…r, with the scenery of the Isle of Wight certainly providing a beautiful setting, and the seemingly effortless performance of Lynda Bellingham hitting all the right comedy marks. This, however is not enough. A number of performances are noticeable , especially…"
+        },
+        {
+          "review_id": "test/pos/9002_7",
+          "rating": 7,
+          "silver": "neutral",
+          "all_models_predict": "none",
+          "llm_evidence": "It's been given the Hollywood treatment to entertain people",
+          "snippet": "…art having a breakdown about this movie (those who play rugby anyway) this is a film! It's been given the Hollywood treatment to entertain people and therefore those who play rugby (myself included) are naturally gonna pick holes in the choreography of the gam…"
+        }
+      ]
+    },
+    "story": {
+      "all_9_runs_wrong": 2589,
+      "all_9_runs_wrong_and_agree": 1614,
+      "share_of_reviews": 0.06456,
+      "top_pairs": [
+        {
+          "silver": "neutral",
+          "models": "negative",
+          "count": 369
+        },
+        {
+          "silver": "neutral",
+          "models": "positive",
+          "count": 336
+        },
+        {
+          "silver": "negative",
+          "models": "none",
+          "count": 151
+        }
+      ],
+      "examples": [
+        {
+          "review_id": "test/neg/764_2",
+          "rating": 2,
+          "silver": "neutral",
+          "all_models_predict": "negative",
+          "llm_evidence": "resulting in any of the then-typical dancing-skeleton-type gags",
+          "snippet": "My God, the things that passed for entertainment in this country... This is *not* the \"Tom and Jerry\" you may have enjoyed on Saturday Mornings, featuring a hapless cat and a clever mouse. This is a much earlier animation series, featuring a pair of Mutt-and-J…"
+        },
+        {
+          "review_id": "test/neg/6983_4",
+          "rating": 4,
+          "silver": "neutral",
+          "all_models_predict": "negative",
+          "llm_evidence": "The story deals with a US war plane which is filled with gold, money, and medals, which crashes into a lake in New Zealand during WWII.",
+          "snippet": "…w and the action just too sparse for this New Zealand adventure to deliver the goods. The story deals with a US war plane which is filled with gold, money, and medals, which crashes into a lake in New Zealand during WWII. The plane remains lost for about forty…"
+        },
+        {
+          "review_id": "test/pos/382_10",
+          "rating": 10,
+          "silver": "neutral",
+          "all_models_predict": "positive",
+          "llm_evidence": "the story is told so well that I don't even think of criticizing its plausibility",
+          "snippet": "…utly told, with many ironic twists and visual pleasures--even if it's \"unbelievable.\" The story is told so well that I don't even think of criticizing its plausibility (although I must confess that the tennis match seems the weakest part to me--too much Hollyw…"
+        }
+      ]
+    },
+    "visual": {
+      "all_9_runs_wrong": 1403,
+      "all_9_runs_wrong_and_agree": 826,
+      "share_of_reviews": 0.03304,
+      "top_pairs": [
+        {
+          "silver": "none",
+          "models": "negative",
+          "count": 171
+        },
+        {
+          "silver": "none",
+          "models": "positive",
+          "count": 129
+        },
+        {
+          "silver": "positive",
+          "models": "none",
+          "count": 115
+        }
+      ],
+      "examples": [
+        {
+          "review_id": "test/neg/1297_2",
+          "rating": 2,
+          "silver": "none",
+          "all_models_predict": "negative",
+          "llm_evidence": "",
+          "snippet": "This film was total rubbish. I was sitting watching this absolutely furious that this was funded. They most definitely spent all their budget on the special FX rather than the script writer and director AND some of the actors. First the acting was bland and ru…"
+        },
+        {
+          "review_id": "test/neg/6169_4",
+          "rating": 4,
+          "silver": "none",
+          "all_models_predict": "negative",
+          "llm_evidence": "",
+          "snippet": "Let me first state that I rarely review movies, I only comment if I'm blown away or disappointed in something that I thought was going to be good. Killshot was a major disappointment on so many levels. The script was horrible, the acting was sub-par (espically…"
+        },
+        {
+          "review_id": "test/neg/3025_1",
+          "rating": 1,
+          "silver": "neutral",
+          "all_models_predict": "negative",
+          "llm_evidence": "black and white movie",
+          "snippet": "… of this movie. As I am a hardcore Eraserhead fan, the \"what, you can't watch a wierd black and white movie with little-to-no dialogue?\" defense does not apply. I simply can't watch TERRIBLE weird black and white movies with little-to-no dialogue. This movie i…"
+        }
+      ]
+    },
+    "sound": {
+      "all_9_runs_wrong": 648,
+      "all_9_runs_wrong_and_agree": 394,
+      "share_of_reviews": 0.01576,
+      "top_pairs": [
+        {
+          "silver": "positive",
+          "models": "none",
+          "count": 85
+        },
+        {
+          "silver": "negative",
+          "models": "none",
+          "count": 77
+        },
+        {
+          "silver": "neutral",
+          "models": "none",
+          "count": 58
+        }
+      ],
+      "examples": [
+        {
+          "review_id": "test/neg/6429_1",
+          "rating": 1,
+          "silver": "negative",
+          "all_models_predict": "none",
+          "llm_evidence": "bad music",
+          "snippet": "…d why Sara was chosen. As the film goes on, we just watch pseudo-scary scenes, with a bad music. Moreover, the end doesn't tell anything : we just see two possibilities as if one of them was a bonus scene or the director's cut... There's no plot, so no possibl…"
+        },
+        {
+          "review_id": "test/pos/8057_9",
+          "rating": 9,
+          "silver": "positive",
+          "all_models_predict": "none",
+          "llm_evidence": "Music by Harry Sukman contributes to the film effectively",
+          "snippet": "…er are in B/W and are very much like news-film, adding to the film's realistic power. Music by Harry Sukman contributes to the film effectively. Writer Daniel Mainwaring and Crane Wilbur produced a swift-paced and straightforward story that divides into parts.…"
+        },
+        {
+          "review_id": "test/neg/6224_1",
+          "rating": 1,
+          "silver": "none",
+          "all_models_predict": "negative",
+          "llm_evidence": "",
+          "snippet": "There's no better way to describe the HORRENDOUS experience that's to watch Mamma Mia: Hitler must be looking up, saying to the pseudo-director Phyllida Lloyd 'You monster, what have you done?' Everything about the movie is wrong. Just Wrong! Even its success,…"
+        }
+      ]
+    },
+    "direction": {
+      "all_9_runs_wrong": 998,
+      "all_9_runs_wrong_and_agree": 626,
+      "share_of_reviews": 0.02504,
+      "top_pairs": [
+        {
+          "silver": "negative",
+          "models": "none",
+          "count": 158
+        },
+        {
+          "silver": "none",
+          "models": "negative",
+          "count": 95
+        },
+        {
+          "silver": "positive",
+          "models": "none",
+          "count": 83
+        }
+      ],
+      "examples": [
+        {
+          "review_id": "test/neg/407_4",
+          "rating": 4,
+          "silver": "neutral",
+          "all_models_predict": "negative",
+          "llm_evidence": "You've got to feel for director Brett Piper as he clearly didn't have much to work with for this film",
+          "snippet": "…ng even resembling a third dimension and they will soon begin to thoroughly bore you. You've got to feel for director Brett Piper as he clearly didn't have much to work with for this film; but that doesn't make Arachnia worth a damn, and overall there are bett…"
+        },
+        {
+          "review_id": "test/pos/6896_10",
+          "rating": 10,
+          "silver": "neutral",
+          "all_models_predict": "none",
+          "llm_evidence": "The movie is told by the younger of the two as he is explaining the business to a priest before he is sent to be beheaded.",
+          "snippet": "…ent clientèle they can serve. This changes the direction of the corpses they collect. The movie is told by the younger of the two as he is explaining the business to a priest before he is sent to be beheaded. His partner had already been beheaded. The priest i…"
+        },
+        {
+          "review_id": "test/pos/11442_10",
+          "rating": 10,
+          "silver": "neutral",
+          "all_models_predict": "positive",
+          "llm_evidence": "Director Frank D. Gilroy also wrote the script",
+          "snippet": "…s success. This is a little slice-of-life movie that is most entertaining throughout. Director Frank D. Gilroy also wrote the script and it's full of interesting subplots and unexpected twists. The actors are journeymen who do a solid job. The biggest revelati…"
+        }
+      ]
+    },
+    "overall": {
+      "all_9_runs_wrong": 1043,
+      "all_9_runs_wrong_and_agree": 658,
+      "share_of_reviews": 0.02632,
+      "top_pairs": [
+        {
+          "silver": "neutral",
+          "models": "positive",
+          "count": 185
+        },
+        {
+          "silver": "neutral",
+          "models": "negative",
+          "count": 151
+        },
+        {
+          "silver": "negative",
+          "models": "neutral",
+          "count": 76
+        }
+      ],
+      "examples": [
+        {
+          "review_id": "test/neg/11143_2",
+          "rating": 2,
+          "silver": "negative",
+          "all_models_predict": "neutral",
+          "llm_evidence": "There probably isn't a worse way to spend a Saturday night",
+          "snippet": "…ation. But they were probably desperate to get in front of Morrissey's camera anyway. There probably isn't a worse way to spend a Saturday night but at least it brings a specific time and place vividly to life."
+        },
+        {
+          "review_id": "test/neg/9587_2",
+          "rating": 2,
+          "silver": "neutral",
+          "all_models_predict": "negative",
+          "llm_evidence": "It sounds like the BBC have decided to turn it into a more conventional 30 minute sitcom",
+          "snippet": "…ked it ! There will be a second series in Autumn 2007 - though without the male lead. It sounds like the BBC have decided to turn it into a more conventional 30 minute sitcom."
+        },
+        {
+          "review_id": "test/neg/3185_1",
+          "rating": 1,
+          "silver": "neutral",
+          "all_models_predict": "negative",
+          "llm_evidence": "It was okay",
+          "snippet": "…e efforts of the actors. I probably would have gone out of the theatre thinking, \"Eh. It was okay.\" So why the undeniably hostile tone in my review? The ending. If, as it's been noted, the rest of the movie is just all a setup for the ending, then it misses sp…"
+        }
+      ]
+    }
+  }
+}
