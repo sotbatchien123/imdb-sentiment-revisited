@@ -284,6 +284,8 @@ Có 46 test, chạy trên CPU trong khoảng 5 giây. Các test kiểm tra:
 | File | Nội dung |
 |---|---|
 | `reports/ieee_paper_absa/main.pdf` | Bài báo IEEE về ABSA (tiếng Anh). Mục kiểm tay đang chờ kết quả |
+| `reports/BAO_CAO_ABSA_2026-11-09.docx` (+ `.pdf`) | Báo cáo tiếng Việt về phần ABSA (13 trang) |
+| `notebooks/ABSA_MovieReview.ipynb` | Notebook trình bày dữ liệu, nhãn LLM, kết quả, kiểm định, phân tích lỗi (chạy được không cần GPU) |
 | `reports/absa_v1/significance.json` | Khoảng tin cậy và kiểm định cho 3 mô hình |
 | `reports/absa_v1/analysis/error_analysis.md` | Phân tích lỗi ABSA |
 | `reports/absa_v1/human_check/HUONG_DAN.md` | Hướng dẫn kiểm tay cho nhóm |

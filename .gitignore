@@ -49,3 +49,7 @@ reports/absa_v1/human_check*/*.xlsx
 
 # Cấu hình xem trước của Claude Code trên máy (có đường dẫn cá nhân)
 .claude/launch.json
+
+# Gói nộp bài (tạo lại được) và bản HTML xuất từ notebook
+reports/submission/
+notebooks/*.html
