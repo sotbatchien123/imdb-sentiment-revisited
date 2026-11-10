@@ -90,8 +90,8 @@ run\absa-train.cmd
 - `overall_vs_imdb_rating`: overall dự đoán so với nhãn sao IMDb. Đây là phép kiểm tra độc lập
   với LLM, vì nhãn sao do chính người viết review cho.
 
-**Lưu ý:** nhãn test hiện là nhãn silver do LLM gán. Khi báo cáo phải ghi rõ điều này cho tới
-khi nhóm kiểm tay xong một phần tập test.
+**Lưu ý:** nhãn test là nhãn silver do LLM gán. Khi báo cáo phải ghi rõ điều này. Quy trình kiểm tay
+(mục 5) đã chuẩn bị nhưng chưa thực hiện trong thời gian dự án (quyết định 10/11).
 
 ## Test
 

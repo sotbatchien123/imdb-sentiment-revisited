@@ -64,7 +64,7 @@ Kết quả trên **25.000 review test**, so với nhãn silver. Mỗi ô là tr
   - Với hình ảnh, âm thanh và đạo diễn, phần lớn lỗi nằm ở việc nhận ra khía cạnh có được nhắc tới hay không.
 
   Chi tiết ở `reports/absa_v1/analysis/error_analysis.md`.
-- **Giới hạn.** Mọi điểm số đang đo so với nhãn silver, chưa phải nhãn người. Nhóm đang kiểm tay 400 review test (`reports/absa_v1/human_check/`). Kết quả sẽ được thêm vào bài báo.
+- **Giới hạn.** Mọi điểm số đo so với nhãn silver, chưa phải nhãn người. Quy trình và công cụ kiểm tay 400 review test đã có sẵn (`scripts/absa_human_check.py`) nhưng chưa được thực hiện trong thời gian dự án; ngoài phép so với số sao (chỉ cho overall), chưa có số đo độ chính xác so với người.
 
 ---
 
@@ -234,7 +234,7 @@ Hướng dẫn đầy đủ: [docs/absa_run.md](docs/absa_run.md). Tóm tắt:
 | 4. Huấn luyện 3 mô hình × 3 seed | `run\absa-train.cmd` | ~5 giờ |
 | 5. Kiểm định | `.venv-train\Scripts\python scripts\absa_significance.py` | ~5 phút, CPU |
 | 6. Phân tích lỗi | `.venv-train\Scripts\python scripts\absa_error_analysis.py` | ~1 phút, CPU |
-| 7. Kiểm tay | `python scripts\absa_human_check.py prepare`, gán xong thì chạy `... score` | — |
+| 7. Kiểm tay (chưa thực hiện) | `python scripts\absa_human_check.py prepare`, gán xong thì chạy `... score` | ~3–4 giờ / người |
 | 8. Hình cho bài báo | `python reports\ieee_paper_absa\make_figures.py` | vài giây |
 
 - **Gán nhãn và huấn luyện đều chạy tiếp được.** Dừng bằng Ctrl+C, hoặc tạo file `work_dirs/<version>/PAUSE`. Chạy lại đúng lệnh cũ thì script bỏ qua phần đã xong.
@@ -283,12 +283,12 @@ Có 46 test, chạy trên CPU trong khoảng 5 giây. Các test kiểm tra:
 
 | File | Nội dung |
 |---|---|
-| `reports/ieee_paper_absa/main.pdf` | Bài báo IEEE về ABSA (tiếng Anh). Mục kiểm tay đang chờ kết quả |
+| `reports/ieee_paper_absa/main.pdf` | Bài báo IEEE về ABSA (tiếng Anh, 6 trang) |
 | `reports/BAO_CAO_ABSA_2026-11-09.docx` (+ `.pdf`) | Báo cáo tiếng Việt về phần ABSA (13 trang) |
 | `notebooks/ABSA_MovieReview.ipynb` | Notebook trình bày dữ liệu, nhãn LLM, kết quả, kiểm định, phân tích lỗi (chạy được không cần GPU) |
 | `reports/absa_v1/significance.json` | Khoảng tin cậy và kiểm định cho 3 mô hình |
 | `reports/absa_v1/analysis/error_analysis.md` | Phân tích lỗi ABSA |
-| `reports/absa_v1/human_check/HUONG_DAN.md` | Hướng dẫn kiểm tay cho nhóm |
+| `reports/absa_v1/human_check/HUONG_DAN.md` | Hướng dẫn kiểm tay (quy trình đã chuẩn bị, chưa thực hiện) |
 | `docs/absa_proposal.md`, `docs/absa_run.md` | Thiết kế và cách chạy phần ABSA |
 | `reports/ieee_paper/main.pdf` | Bài báo IEEE về phân loại 2 lớp |
 | `reports/BAO_CAO_CAI_TIEN_2026-11-01.docx` | Báo cáo tiếng Việt của phần 2 lớp |

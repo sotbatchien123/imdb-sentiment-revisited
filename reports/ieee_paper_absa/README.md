@@ -8,12 +8,12 @@ Bài mới cho bài toán phân tích cảm xúc theo 6 khía cạnh. Bài cũ (
   `reports/absa_v1/significance.json` và `reports/absa_v1/analysis/error_analysis.json`.
 - Sơ đồ quy trình (Hình 1) vẽ bằng TikZ ngay trong `main.tex`.
 
-## Chỗ còn thiếu (tô đỏ trong PDF)
+## Kiểm tay bằng người
 
-Mục **Human Verification** đang chờ kết quả kiểm tay của nhóm. Khi nhóm điền xong 3 file trong
-`reports/absa_v1/human_check/`, chạy `scripts/absa_human_check.py score`, lấy số trong
-`human_eval.json` rồi thay đoạn `\pending{...}` bằng bảng kết quả. Sau đó sửa lại câu cuối của
-abstract ("A human verification ... is in progress").
+Mục **Human Verification Protocol** mô tả quy trình kiểm tay 400 review đã chuẩn bị nhưng chưa thực
+hiện (ghi là giới hạn, quyết định 10/11). Nếu sau này làm: điền 3 file trong
+`reports/absa_v1/human_check/`, chạy `scripts/absa_human_check.py score`, đưa số trong
+`human_eval.json` vào mục đó, rồi sửa câu cuối của abstract và mục Limitations.
 
 ## Vẽ lại hình
 
