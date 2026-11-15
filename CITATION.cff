@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "Nếu bạn dùng mã hoặc kết quả của repo này, vui lòng trích dẫn như dưới đây."
+title: "imdb-sentiment-revisited: Aspect-based sentiment analysis of IMDb movie reviews"
+abstract: >-
+  Reproduction and improvement of BERT+BiLSTM for binary IMDb sentiment classification
+  (fine-tuned RoBERTa-large, 96.74% Macro-F1), followed by aspect-based sentiment analysis over
+  six aspects with silver labels from a local Qwen3-8B (fine-tuned RoBERTa-large, 74.19% Macro-F1
+  against the silver labels).
+type: software
+authors:
+  - family-names: "Vũ"
+    given-names: "Quốc Đạt"
+    affiliation: "FPT University, Da Nang, Vietnam"
+  - family-names: "Nguyễn"
+    given-names: "Gia Phúc"
+    affiliation: "FPT University, Da Nang, Vietnam"
+  - family-names: "Ngô"
+    given-names: "Ngọc Trường Sơn"
+    affiliation: "FPT University, Da Nang, Vietnam"
+repository-code: "https://github.com/sotbatchien123/imdb-sentiment-revisited"
+license: MIT
+date-released: "2026-11-13"
+keywords:
+  - sentiment analysis
+  - aspect-based sentiment analysis
+  - IMDb
+  - BERT
+  - RoBERTa
+  - large language models
