@@ -45,12 +45,17 @@ def compare(ref: dict, other: dict, aspects: list[str]) -> dict:
             "macro_f1": float(f1_score(y, p, average="macro", zero_division=0)) if ids else None,
             "confusion_matrix": {
                 "labels": LABELS,
-                "rows_reference_cols_other": confusion_matrix(y, p, labels=LABELS).tolist(),
+                "rows_reference_cols_other": (
+                    confusion_matrix(y, p, labels=LABELS).tolist()
+                    if ids else [[0] * len(LABELS) for _ in LABELS]
+                ),
             },
         }
     vals = list(report["per_aspect"].values())
+    # Không có review chung thì mọi chỉ số đều là None, nên trung bình cũng là None (trước đây bị TypeError).
     report["mean"] = {
-        k: sum(v[k] for v in vals) / len(vals) for k in ("agreement", "cohen_kappa", "macro_f1")
+        k: sum(v[k] for v in vals) / len(vals) if ids else None
+        for k in ("agreement", "cohen_kappa", "macro_f1")
     }
     return report
 
