@@ -324,7 +324,7 @@ Until such a verification is done, the only evidence independent of the LLM is t
 We built a six-aspect sentiment dataset over all 49{,}777 reviews of a movie-grouped IMDb split by labeling it with a local 8B-parameter LLM, and showed that an evidence-first prompt with a grounding check improves agreement with a reference set from $\kappa$=0.54 to 0.72. Trained on these silver labels, a fine-tuned RoBERTa-large reaches 74.19\% mean Macro-F1, significantly ahead of BERT-base and a frozen BERT with a BiLSTM on every aspect, and its \emph{overall} predictions agree with the reviewers' star ratings on 97.5\% of decided reviews. The remaining errors are concentrated on the neutral class and on long reviews.
 
 \section*{Author Contributions}
-Ngô Ngọc Trường Sơn: idea, implementation, all experiments, analysis and writing. Vũ Quốc Đạt and Nguyễn Gia Phúc: discussion of the study design and review of the manuscript. All authors read and approved the paper.
+Ngô Ngọc Trường Sơn: idea, implementation, all experiments, analysis and writing. Nguyễn Gia Phúc: review, testing and submission of the unit tests for the label-comparison script, including the fix they revealed. Vũ Quốc Đạt: verification and submission of the citation metadata of the repository. Both: discussion of the study design and review of the manuscript. All authors read and approved the paper.
 
 \section*{Funding}
 This research did not receive any specific grant from funding agencies in the public, commercial, or not-for-profit sectors.

@@ -77,7 +77,7 @@ run\absa-train.cmd
   `sqrt_inverse` để lớp none không lấn át các lớp khác.
 - Epoch tốt nhất được chọn theo Macro-F1 trung bình 6 khía cạnh trên validation. Test chỉ chạy
   một lần trên checkpoint đó.
-- Checkpoint lưu ở `E:/MovieReview_checkpoints/<version>/` (`latest.pt` của 9 seed đã train để ở `D:/MovieReview_checkpoints`) (ngoài thư mục dự án vì RoBERTa-large nặng khoảng 5 GB mỗi seed). Kết quả lưu ở
+- Checkpoint lưu ở `E:/MovieReview_checkpoints/<version>/` (ngoài thư mục dự án vì RoBERTa-large nặng khoảng 5 GB mỗi seed). Sau khi xong dự án (22/11) chỉ giữ `best.pt`; `latest.pt` (trạng thái optimizer, chỉ dùng để chạy tiếp) và checkpoint smoke đã xoá, nên muốn huấn luyện lại phải chạy từ đầu. Kết quả lưu ở
   `work_dirs/<version>/seed*/result.json`, tổng hợp ở `reports/absa_v1/<version>/results.json`.
 - Muốn tạm dừng thì tạo file `work_dirs/<version>/PAUSE`; runner sẽ dừng ở cuối epoch. Chạy
   lại để tiếp tục.
