@@ -109,7 +109,24 @@ Mở http://127.0.0.1:8766 sau khi cửa sổ hiện dòng "Sẵn sàng". Nạp 
 | `run\absa-demo.cmd --device cuda` | Chạy trên GPU |
 | `--port` | Đổi cổng |
 
-Demo cần `best.pt` của `absa_roberta_large_v1` và `absa_bert_base_v1` (đường dẫn ghi trong `checkpoint_dir` của config) cùng `work_dirs/<version>/seed*/result.json`.
+Demo cần `best.pt` của `absa_roberta_large_v1` và `absa_bert_base_v1` (đường dẫn ghi trong `checkpoint_dir` của config) cùng `work_dirs/<version>/seed*/result.json`. Cả hai được tải ở mục dưới, không cần huấn luyện lại.
+
+### Tải checkpoint
+
+Toàn bộ 9 checkpoint (3 mô hình × 3 seed) nằm ở release [`absa-checkpoints-v1`](https://github.com/sotbatchien123/imdb-sentiment-revisited/releases/tag/absa-checkpoints-v1), kèm `absa_v1_work_dirs.zip` (kết quả từng seed) và `SHA256SUMS.txt`. Demo chỉ cần 2 file khoảng 1,8 GB. Chạy ở thư mục gốc repo, sau khi đã tải mô hình gốc ở [mục 6.2](#62-mô-hình-tiền-huấn-luyện):
+
+```powershell
+$u = "https://github.com/sotbatchien123/imdb-sentiment-revisited/releases/download/absa-checkpoints-v1"
+Invoke-WebRequest "$u/absa_v1_work_dirs.zip" -OutFile absa_v1_work_dirs.zip
+Expand-Archive absa_v1_work_dirs.zip -DestinationPath . -Force      # tạo work_dirs/absa_*_v1/seed*/result.json
+foreach ($m in "absa_roberta_large_v1_seed43", "absa_bert_base_v1_seed42") {
+    $v, $s = $m -split "_(?=seed)"
+    New-Item -ItemType Directory -Force "E:/MovieReview_checkpoints/$v/$s" | Out-Null
+    Invoke-WebRequest "$u/${m}_best.pt" -OutFile "E:/MovieReview_checkpoints/$v/$s/best.pt"
+}
+```
+
+Muốn để checkpoint ở chỗ khác thì sửa `checkpoint_dir` trong `configs/absa_*_v1.json`. Checkpoint chỉ chứa trọng số mô hình, không có trạng thái optimizer, nên dùng để dự đoán chứ không chạy tiếp huấn luyện được.
 
 Demo cũ của phần 2 lớp vẫn còn: `run\run-demo.cmd`, cổng 8765.
 
